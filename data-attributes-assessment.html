@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4.3 Data Attributes Assessment | Do Data Science in 10 Hours</title>
+  <meta name="description" content="This is my first book writtn using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4.3 Data Attributes Assessment | Do Data Science in 10 Hours" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is my first book writtn using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4.3 Data Attributes Assessment | Do Data Science in 10 Hours" />
+  
+  <meta name="twitter:description" content="This is my first book writtn using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
+  
+
+<meta name="author" content="Gangmin Li" />
+
+
+<meta name="date" content="2020-10-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="assess-data-quantity.html"/>
+<link rel="next" href="data-recods-level-assessment.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="css\style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Authoring Books with R Markdown</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section"></a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="0.1" data-path="what-is-this-book-why-to-read-it.html"><a href="what-is-this-book-why-to-read-it.html"><i class="fa fa-check"></i><b>0.1</b> What is this book? Why to read it?</a></li>
+<li class="chapter" data-level="0.2" data-path="structure-of-the-book.html"><a href="structure-of-the-book.html"><i class="fa fa-check"></i><b>0.2</b> Structure of the Book</a></li>
+<li class="chapter" data-level="0.3" data-path="what-can-this-course-offer-you.html"><a href="what-can-this-course-offer-you.html"><i class="fa fa-check"></i><b>0.3</b> What Can This Course Offer You?</a></li>
+<li class="chapter" data-level="0.4" data-path="schedule.html"><a href="schedule.html"><i class="fa fa-check"></i><b>0.4</b> Schedule</a></li>
+<li class="chapter" data-level="0.5" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i><b>0.5</b> Notes</a></li>
+<li class="chapter" data-level="0.6" data-path="convention.html"><a href="convention.html"><i class="fa fa-check"></i><b>0.6</b> Convention</a></li>
+<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="what-is-data-science.html"><a href="what-is-data-science.html"><i class="fa fa-check"></i><b>1.1</b> What is Data Science?</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="what-is-data-science.html"><a href="what-is-data-science.html#data-science-as-discovery-of-data-insight"><i class="fa fa-check"></i><b>1.1.1</b> Data science as Discovery of Data Insight</a></li>
+<li class="chapter" data-level="1.1.2" data-path="what-is-data-science.html"><a href="what-is-data-science.html#data-science-as-development-of-data-product"><i class="fa fa-check"></i><b>1.1.2</b> Data science as Development of Data Product</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="what-is-data-scientist.html"><a href="what-is-data-scientist.html"><i class="fa fa-check"></i><b>1.2</b> What is Data Scientist?</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="what-is-data-scientist.html"><a href="what-is-data-scientist.html#the-requisite-skill-set"><i class="fa fa-check"></i><b>1.2.1</b> The Requisite Skill Set</a></li>
+<li class="chapter" data-level="1.2.2" data-path="what-is-data-scientist.html"><a href="what-is-data-scientist.html#how-to-become-a-data-scientist"><i class="fa fa-check"></i><b>1.2.2</b> How to Become a Data Scientist?</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="process.html"><a href="process.html"><i class="fa fa-check"></i><b>1.3</b> Process of Doing Data Science</a><ul>
+<li class="chapter" data-level="" data-path="process.html"><a href="process.html#step1"><i class="fa fa-check"></i>Step 1: Understand the Problem - Define Objectives</a></li>
+<li class="chapter" data-level="" data-path="process.html"><a href="process.html#step2"><i class="fa fa-check"></i>Step 2: Undertand Data</a></li>
+<li class="chapter" data-level="" data-path="process.html"><a href="process.html#preprocess"><i class="fa fa-check"></i>Step 3: Data Preprocess</a></li>
+<li class="chapter" data-level="" data-path="process.html"><a href="process.html#analyse"><i class="fa fa-check"></i>Step 4: Analyze Data</a></li>
+<li class="chapter" data-level="" data-path="process.html"><a href="process.html#step-5-results-interpretation-and-evaluation"><i class="fa fa-check"></i>Step 5: Results Interpretation and Evaluation</a></li>
+<li class="chapter" data-level="" data-path="process.html"><a href="process.html#step-6-data-report-and-communication"><i class="fa fa-check"></i>Step 6: Data Report and Communication)</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="tools-used-in-doing-a-data-science-project.html"><a href="tools-used-in-doing-a-data-science-project.html"><i class="fa fa-check"></i><b>1.4</b> Tools used in Doing a Data Science Project</a><ul>
+<li class="chapter" data-level="" data-path="tools-used-in-doing-a-data-science-project.html"><a href="tools-used-in-doing-a-data-science-project.html#r"><i class="fa fa-check"></i>R</a></li>
+<li class="chapter" data-level="" data-path="tools-used-in-doing-a-data-science-project.html"><a href="tools-used-in-doing-a-data-science-project.html#python"><i class="fa fa-check"></i>Python</a></li>
+<li class="chapter" data-level="" data-path="tools-used-in-doing-a-data-science-project.html"><a href="tools-used-in-doing-a-data-science-project.html#sql"><i class="fa fa-check"></i>SQL</a></li>
+<li class="chapter" data-level="" data-path="tools-used-in-doing-a-data-science-project.html"><a href="tools-used-in-doing-a-data-science-project.html#hadoop"><i class="fa fa-check"></i>Hadoop</a></li>
+<li class="chapter" data-level="" data-path="tools-used-in-doing-a-data-science-project.html"><a href="tools-used-in-doing-a-data-science-project.html#tableau"><i class="fa fa-check"></i>Tableau</a></li>
+<li class="chapter" data-level="" data-path="tools-used-in-doing-a-data-science-project.html"><a href="tools-used-in-doing-a-data-science-project.html#weka"><i class="fa fa-check"></i>Weka</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="applications-of-data-science.html"><a href="applications-of-data-science.html"><i class="fa fa-check"></i><b>1.5</b> Applications of Data Science</a><ul>
+<li class="chapter" data-level="" data-path="applications-of-data-science.html"><a href="applications-of-data-science.html#data-science-in-healthcare"><i class="fa fa-check"></i>Data Science in Healthcare</a></li>
+<li class="chapter" data-level="" data-path="applications-of-data-science.html"><a href="applications-of-data-science.html#data-science-in-e-commerce"><i class="fa fa-check"></i>Data Science in E-commerce</a></li>
+<li class="chapter" data-level="" data-path="applications-of-data-science.html"><a href="applications-of-data-science.html#data-science-in-manufacturing"><i class="fa fa-check"></i>Data Science in Manufacturing</a></li>
+<li class="chapter" data-level="" data-path="applications-of-data-science.html"><a href="applications-of-data-science.html#data-science-as-conversational-agents"><i class="fa fa-check"></i>Data Science as Conversational Agents</a></li>
+<li class="chapter" data-level="" data-path="applications-of-data-science.html"><a href="applications-of-data-science.html#data-science-in-transport"><i class="fa fa-check"></i>Data Science in Transport</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="summary.html"><a href="summary.html"><i class="fa fa-check"></i>Summary</a></li>
+<li class="chapter" data-level="" data-path="exercise-1.html"><a href="exercise-1.html"><i class="fa fa-check"></i>Exercise 1</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="tools.html"><a href="tools.html"><i class="fa fa-check"></i><b>2</b> Get Your Tools Ready</a><ul>
+<li class="chapter" data-level="2.1" data-path="brief-introductiuon-about-r-and-rstudio.html"><a href="brief-introductiuon-about-r-and-rstudio.html"><i class="fa fa-check"></i><b>2.1</b> Brief introductiuon about R and RStudio</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="brief-introductiuon-about-r-and-rstudio.html"><a href="brief-introductiuon-about-r-and-rstudio.html#features-of-r-programming"><i class="fa fa-check"></i><b>2.1.1</b> Features of R Programming</a></li>
+<li class="chapter" data-level="2.1.2" data-path="brief-introductiuon-about-r-and-rstudio.html"><a href="brief-introductiuon-about-r-and-rstudio.html#r-scripts"><i class="fa fa-check"></i><b>2.1.2</b> R Scripts</a></li>
+<li class="chapter" data-level="2.1.3" data-path="brief-introductiuon-about-r-and-rstudio.html"><a href="brief-introductiuon-about-r-and-rstudio.html#r-graphical-user-interface-rgui"><i class="fa fa-check"></i><b>2.1.3</b> R Graphical User Interface (RGui)</a></li>
+<li class="chapter" data-level="2.1.4" data-path="brief-introductiuon-about-r-and-rstudio.html"><a href="brief-introductiuon-about-r-and-rstudio.html#rstudio"><i class="fa fa-check"></i><b>2.1.4</b> RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="downlaod-and-install-r-and-rstudio.html"><a href="downlaod-and-install-r-and-rstudio.html"><i class="fa fa-check"></i><b>2.2</b> Downlaod and Install R and RStudio</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="downlaod-and-install-r-and-rstudio.html"><a href="downlaod-and-install-r-and-rstudio.html#r-download-and-installation"><i class="fa fa-check"></i><b>2.2.1</b> R Download and Installation</a></li>
+<li class="chapter" data-level="2.2.2" data-path="downlaod-and-install-r-and-rstudio.html"><a href="downlaod-and-install-r-and-rstudio.html#rstudio-download-and-installation"><i class="fa fa-check"></i><b>2.2.2</b> RStudio Download and Installation</a></li>
+<li class="chapter" data-level="2.2.3" data-path="downlaod-and-install-r-and-rstudio.html"><a href="downlaod-and-install-r-and-rstudio.html#rs"><i class="fa fa-check"></i><b>2.2.3</b> Familiar with RStudio interface</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="bootsup-your-rstudio.html"><a href="bootsup-your-rstudio.html"><i class="fa fa-check"></i><b>2.3</b> Bootsup your RStudio</a></li>
+<li class="chapter" data-level="2.4" data-path="instructions.html"><a href="instructions.html"><i class="fa fa-check"></i><b>2.4</b> Instructions</a><ul>
+<li class="chapter" data-level="" data-path="instructions.html"><a href="instructions.html#code"><i class="fa fa-check"></i>Code</a></li>
+<li class="chapter" data-level="" data-path="instructions.html"><a href="instructions.html#tips"><i class="fa fa-check"></i>Tips</a></li>
+<li class="chapter" data-level="" data-path="instructions.html"><a href="instructions.html#actions"><i class="fa fa-check"></i>Actions</a></li>
+<li class="chapter" data-level="" data-path="instructions.html"><a href="instructions.html#exercise"><i class="fa fa-check"></i>Exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exercise-2.html"><a href="exercise-2.html"><i class="fa fa-check"></i>Exercise 2</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="prob.html"><a href="prob.html"><i class="fa fa-check"></i><b>3</b> Understand Problem</a><ul>
+<li class="chapter" data-level="3.1" data-path="kaggle-competion.html"><a href="kaggle-competion.html"><i class="fa fa-check"></i><b>3.1</b> Kaggle Competion</a></li>
+<li class="chapter" data-level="3.2" data-path="titianic-at-kaggel.html"><a href="titianic-at-kaggel.html"><i class="fa fa-check"></i><b>3.2</b> Titianic at Kaggel</a></li>
+<li class="chapter" data-level="3.3" data-path="the-titanic-problem.html"><a href="the-titanic-problem.html"><i class="fa fa-check"></i><b>3.3</b> The Titanic problem</a><ul>
+<li class="chapter" data-level="" data-path="the-titanic-problem.html"><a href="the-titanic-problem.html#the-challenge"><i class="fa fa-check"></i>The challenge</a></li>
+<li class="chapter" data-level="" data-path="the-titanic-problem.html"><a href="the-titanic-problem.html#the-data"><i class="fa fa-check"></i>The data</a></li>
+<li class="chapter" data-level="" data-path="the-titanic-problem.html"><a href="the-titanic-problem.html#submission"><i class="fa fa-check"></i>Submission</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="reflection.html"><a href="reflection.html"><i class="fa fa-check"></i><b>3.4</b> Reflection</a></li>
+<li class="chapter" data-level="" data-path="exercises-3.html"><a href="exercises-3.html"><i class="fa fa-check"></i>Exercises 3</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="understand-data.html"><a href="understand-data.html"><i class="fa fa-check"></i><b>4</b> Understand Data</a><ul>
+<li class="chapter" data-level="4.1" data-path="load-data.html"><a href="load-data.html"><i class="fa fa-check"></i><b>4.1</b> Load data</a></li>
+<li class="chapter" data-level="4.2" data-path="assess-data-quantity.html"><a href="assess-data-quantity.html"><i class="fa fa-check"></i><b>4.2</b> Assess Data Quantity</a></li>
+<li class="chapter" data-level="4.3" data-path="data-attributes-assessment.html"><a href="data-attributes-assessment.html"><i class="fa fa-check"></i><b>4.3</b> Data Attributes Assessment</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="data-attributes-assessment.html"><a href="data-attributes-assessment.html#general-attributes-description"><i class="fa fa-check"></i><b>4.3.1</b> General Attributes Description</a></li>
+<li class="chapter" data-level="4.3.2" data-path="data-attributes-assessment.html"><a href="data-attributes-assessment.html#actual-attributes-types-examination"><i class="fa fa-check"></i><b>4.3.2</b> Actual Attributes Types Examination</a></li>
+<li class="chapter" data-level="4.3.3" data-path="data-attributes-assessment.html"><a href="data-attributes-assessment.html#actual-data-attributes-value-examination"><i class="fa fa-check"></i><b>4.3.3</b> Actual Data Attributes Value Examination</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="data-recods-level-assessment.html"><a href="data-recods-level-assessment.html"><i class="fa fa-check"></i><b>4.4</b> Data recods level assessment</a></li>
+<li class="chapter" data-level="" data-path="summary.html"><a href="summary.html#summary"><i class="fa fa-check"></i>Summary</a></li>
+<li class="chapter" data-level="" data-path="exercises-4.html"><a href="exercises-4.html"><i class="fa fa-check"></i>Exercises 4</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="data-preprocess.html"><a href="data-preprocess.html"><i class="fa fa-check"></i><b>5</b> Data PreProcess</a><ul>
+<li class="chapter" data-level="5.1" data-path="explore-realtions-for-survivle.html"><a href="explore-realtions-for-survivle.html"><i class="fa fa-check"></i><b>5.1</b> explore realtions for survivle</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="data-analysis.html"><a href="data-analysis.html"><i class="fa fa-check"></i><b>6</b> Data Analysis</a></li>
+<li class="chapter" data-level="7" data-path="result-interpretation.html"><a href="result-interpretation.html"><i class="fa fa-check"></i><b>7</b> Result Interpretation</a></li>
+<li class="chapter" data-level="8" data-path="data-report.html"><a href="data-report.html"><i class="fa fa-check"></i><b>8</b> Data Report</a></li>
+<li class="chapter" data-level="" data-path="reference.html"><a href="reference.html"><i class="fa fa-check"></i>Reference</a><ul>
+<li class="chapter" data-level="8.1" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>8.1</b> R Markdown</a></li>
+<li class="chapter" data-level="8.2" data-path="including-plots.html"><a href="including-plots.html"><i class="fa fa-check"></i><b>8.2</b> Including Plots</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="_blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Do Data Science in 10 Hours</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="data-attributes-assessment" class="section level2">
+<h2><span class="header-section-number">4.3</span> Data Attributes Assessment</h2>
+<p>After a brief assessment on the data quantity, we know that the both datasets are not too big in terms of both number records (891 and 418) and number of attributes (12 and 11). We also have an intuitive understand about the attributes, some obvious names like <em>Name</em>, <em>Sex</em> and <em>Age</em>; and some not so obvious names like <em>SibSp</em> and <em>Parch</em>.</p>
+<div id="general-attributes-description" class="section level3">
+<h3><span class="header-section-number">4.3.1</span> General Attributes Description</h3>
+<p>Before we looking into individual attributes (single variate analysis) in our datasets, let us get some general sense of all attributes and make sure we understand each of them.</p>
+<p>We knew that dataset <code>test</code> has 11 attributes and <code>train</code> has 12 attributes. The one attribute short is the <em>Survived</em>. The rest are the same. Let us look into those attributes, the following is from the Kaggel web site:</p>
+<p><img src="img/DatafrKaggle.png" width="100%" style="display: block; margin: auto;" /></p>
+<pre><code>attribute Notes
+*Pclass*: A proxy for socio-economic status (SES)
+1st = Upper
+2nd = Middle
+3rd = Lower
+
+*Age*: Age is fractional if less than 1. If the age is estimated, is it in the form of xx.5
+
+*Sibsp*: The dataset defines family relations in this way...
+*Sibling* = brother, sister, stepbrother, stepsister
+*Spouse* = husband, wife (mistresses and fiancés were ignored)
+
+*Parch*: The dataset defines family relations in this way...
+Parent = mother, father
+Child = daughter, son, stepdaughter, stepson
+Some children travelled only with a nanny, therefore parch=0 for them.</code></pre>
+<p>Just looking into these attributes’ description, a few thoughts are occurred:</p>
+<ol style="list-style-type: decimal">
+<li>Attribute types</li>
+</ol>
+<p>There are attributes should be categorical types. The values of those attributes can be any types but the importance is that they can classify the records into sets of similar groups and this grouping make sense to the problem to be solved. In Titanic datasets, attributes should have <strong>categorical</strong> type are: <em>Survived</em>, <em>Sex</em>, <em>Embarked</em>, and <em>Pclass</em>.</p>
+<p>Other attribute perhaps should have numerical type. Thsi is because these attributes values change from record to record. They can be the values of discrete, continuous, or timeseries. One thing in common is that these values can be manipulated and applied with many math functions and plotting tools for visualization. In Titanic datasets, attributes should have <strong>numerical</strong> type are: <em>Age</em>, <em>Fare</em>, <em>SibSp</em>, <em>Parch</em>.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Contribution to Survive</li>
+</ol>
+<p>The final goal is to predict passenger’s survived or not. It makes sense to assess the prediction power of each attribute. which is the contribution of an attribute to attrribute <em>Survived</em>. In other words, the potential relationships among these attributes and with the attribute <em>Survived</em> need to be assessed. Here are some thoughts:</p>
+<ul>
+<li><p><em>Pclass</em> should somehow linked with <em>Fare</em> and <em>Cabin</em>. Generally, the higher the class is and the more expensive of the fare will be and the better cabin locations are. So those should have some sort of correlations among them. they together should have some affect on survive. You would think that the expensive ticket, means better cabin location and has privilege to escape first in the disaster.</p></li>
+<li><p>What is the ticket number to do with survive? Is it just a random number? Or is associated with cabin? Or anything else like Port of embarkation? ticket number in some other systems could have more information rather than just an unique number.</p></li>
+<li><p>Is the <em>Fair</em> in someways associated with journey length, which means the Port of embarkation and the port of disembarkation? Or cabin location and condition?</p></li>
+</ul>
+<p>You can have other thoughts too. To prove or disprove these assumptions and thoughts, we need to look into the actual datasets at least to see:</p>
+<ol style="list-style-type: decimal">
+<li>What are the data types for various attributes?</li>
+</ol>
+<ul>
+<li>Which attributes are available in the dataset?</li>
+<li>Which attributes are categorical?</li>
+<li>Which attributes are numerical?</li>
+<li>Which attributes are mixed data types?</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Any errors in the attributes values?</li>
+</ol>
+<ul>
+<li>Which features may contain errors or typos?</li>
+<li>Which features contain blank, null or empty values?</li>
+</ul>
+<p>These questions will be answered in the following two sections.</p>
+</div>
+<div id="actual-attributes-types-examination" class="section level3">
+<h3><span class="header-section-number">4.3.2</span> Actual Attributes Types Examination</h3>
+<p>From figure <a href="assess-data-quantity.html#fig:Rstr">4.4</a>, We can see that all the attributes have only three types, <code>int</code>, <code>Factor</code>, <code>num</code>.</p>
+<p>Attributes have <code>int</code> types are: <em>PassengerId</em>, <em>Survived</em>, <em>SibSp</em>, <em>Parch</em>.</p>
+<p>Attributes has <code>Factor</code> types are: <em>Name</em>, <em>Sex</em>, <em>Ticket</em>, <em>Cabin</em> and <em>Embarked</em>.</p>
+<p>Attributes has <code>num</code> types are: <em>Age</em> and <em>Fare</em>.</p>
+<p>We know that, the type <code>int</code> is for attribute that has an integer value; and <code>num</code> is for an numeric attribute, which has the values of real numbers.</p>
+<p>Type <code>Factor</code> is R language’s way to say category type. It is a attribute that can take on one of a limited, and usually fixed, number of possible values, such as blood type.</p>
+<p>Attributes types affect the operations we can apply on that attributes. In other words inappropriate types can prevent us to do proper analysis on that attribute. For example, it doe’s not make sense to calculate average on sex, so it is better to be with a type of Category, in R is a <code>Factor</code>. Similarly, <em>Survived</em> will have only two values 0 or 1, to represent death or live. It makes sense to be an <code>factor</code> too. Being a <code>int</code> type, it will prevent us to apply many methods that only works for a <code>Factor</code> type attribute.</p>
+<p>So, looking into data attributes types, compare with the original meaning of each attributes can help us to spot any inappropriate types or wrong types.</p>
+
+<div class="rmdthinking">
+<p>Thinking:</p>
+<p>Is <strong>Servived typed</strong> <code>int</code> approriate?</p>
+What other attributes do you think are in a wrong type?
+</div>
+
+</div>
+<div id="actual-data-attributes-value-examination" class="section level3">
+<h3><span class="header-section-number">4.3.3</span> Actual Data Attributes Value Examination</h3>
+<p>To understand given datasets needs to carefully examine the values of each data attributes to:</p>
+<ul>
+<li>find any errors and missing values</li>
+<li>find value distribution</li>
+<li>find potential relation with the attribute to be predicted (also called dependent variable)</li>
+</ul>
+<p>Finding errors, typos and missing values can set up the goals for data prepsocess.</p>
+<p>Since the examine covers both datesets <code>train</code> and <code>test</code>, it make sense to combine the two datasets into one big dataset, so it can save us to run the same code twice on the different datasets.</p>
+<p>Copy the following code into your script,</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="data-attributes-assessment.html#cb5-1"></a><span class="co"># Add a &quot;Survived&quot; attribute to the test dataset to allow for combining with train dataset</span></span>
+<span id="cb5-2"><a href="data-attributes-assessment.html#cb5-2"></a></span>
+<span id="cb5-3"><a href="data-attributes-assessment.html#cb5-3"></a>test &lt;-<span class="st"> </span><span class="kw">data.frame</span>(test[<span class="dv">1</span>], <span class="dt">Survived =</span> <span class="kw">rep</span>(<span class="st">&quot;NA&quot;</span>, <span class="kw">nrow</span>(test)), test[ ,<span class="dv">2</span><span class="op">:</span><span class="kw">ncol</span>(test)])</span>
+<span id="cb5-4"><a href="data-attributes-assessment.html#cb5-4"></a></span>
+<span id="cb5-5"><a href="data-attributes-assessment.html#cb5-5"></a><span class="co"># Combine data sets. Append test.survived to train</span></span>
+<span id="cb5-6"><a href="data-attributes-assessment.html#cb5-6"></a>data &lt;-<span class="st"> </span><span class="kw">rbind</span>(train, test)</span></code></pre></div>
+<p>Now we have a dataset <code>data</code>, which combines both datasets <code>train</code> and <code>test</code> datasets. We assigned the value of attribute <em>Survived</em> in the original dataset <code>test</code> as “NA”. You can check them in the <strong>WorkSpace pane</strong> by click variable data.</p>
+
+<div class="rmdtry">
+<p>Thinking:</p>
+<ol style="list-style-type: decimal">
+<li>Can we combine <code>train</code> and <code>test</code> without add <em>Survived</em> attribute to the test? Like,</li>
+</ol>
+<p><code>data &lt;- rbind(train, test)</code></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Why add attibute <em>Survived</em> as the second attribute? Can we add it as the first one? Like,</li>
+</ol>
+<p><code>test &lt;- data.frame(Survived = rep("NA", nrow(test)), test[,])</code></p>
+</div>
+
+<p>It is good idea to have bird eye’s view on our combined dataset.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="data-attributes-assessment.html#cb6-1"></a><span class="co"># check out data with a summary</span></span>
+<span id="cb6-2"><a href="data-attributes-assessment.html#cb6-2"></a><span class="kw">summary.data.frame</span>(data)</span></code></pre></div>
+<pre><code>##   PassengerId     Survived             Pclass     
+##  Min.   :   1   Length:1309        Min.   :1.000  
+##  1st Qu.: 328   Class :character   1st Qu.:2.000  
+##  Median : 655   Mode  :character   Median :3.000  
+##  Mean   : 655                      Mean   :2.295  
+##  3rd Qu.: 982                      3rd Qu.:3.000  
+##  Max.   :1309                      Max.   :3.000  
+##                                                   
+##                                Name          Sex           Age       
+##  Connolly, Miss. Kate            :   2   female:466   Min.   : 0.17  
+##  Kelly, Mr. James                :   2   male  :843   1st Qu.:21.00  
+##  Abbing, Mr. Anthony             :   1                Median :28.00  
+##  Abbott, Mr. Rossmore Edward     :   1                Mean   :29.88  
+##  Abbott, Mrs. Stanton (Rosa Hunt):   1                3rd Qu.:39.00  
+##  Abelson, Mr. Samuel             :   1                Max.   :80.00  
+##  (Other)                         :1301                NA&#39;s   :263    
+##      SibSp            Parch            Ticket          Fare        
+##  Min.   :0.0000   Min.   :0.000   CA. 2343:  11   Min.   :  0.000  
+##  1st Qu.:0.0000   1st Qu.:0.000   1601    :   8   1st Qu.:  7.896  
+##  Median :0.0000   Median :0.000   CA 2144 :   8   Median : 14.454  
+##  Mean   :0.4989   Mean   :0.385   3101295 :   7   Mean   : 33.295  
+##  3rd Qu.:1.0000   3rd Qu.:0.000   347077  :   7   3rd Qu.: 31.275  
+##  Max.   :8.0000   Max.   :9.000   347082  :   7   Max.   :512.329  
+##                                   (Other) :1261   NA&#39;s   :1        
+##              Cabin      Embarked
+##                 :1014    :  2   
+##  C23 C25 C27    :   6   C:270   
+##  B57 B59 B63 B66:   5   Q:123   
+##  G6             :   5   S:914   
+##  B96 B98        :   4           
+##  C22 C26        :   4           
+##  (Other)        : 271</code></pre>
+<p>This summary tell us a lot of information. Most obvious are:</p>
+<ol style="list-style-type: decimal">
+<li><em>PassengerID</em> is useless in terms of predicting survived or not. in addition, it is not much help that provide a statistical summary on it.</li>
+<li><em>Survived</em> and <em>Pclass</em> numbers are useful and interesting.</li>
+<li><em>Name</em> is mostly unique, which comes a surprise that only 2 names are repeated twice.</li>
+<li><em>Gender</em> distribution among passenger is unbalanced that male overweight female.</li>
+<li><em>Age</em> is interesting that minimum age 0.17 is alarming and there is 263 missing values.</li>
+<li><em>SibSp</em> tells us the largest relatives travel together is 8.</li>
+<li><em>ParCh</em> tells us the largest family travel together is 9.</li>
+<li>There are large number of <em>ticket</em> has the same number. The most repeat number is CA. 2343, which has 11 duplicates.</li>
+<li>Ticket <em>Fare</em> shows the minimum is 0, which is interesting that someone take a free ride. The maximum is over 512, which is far too expensive when the mean value is only about 33.</li>
+<li>Both <em>Cabin</em> and <em>Embarked</em> have values which can be identified and need more investigation.</li>
+</ol>
+<p>You can see now one function can provide so much information. Quantitative summary is a great tool for a data scientist.</p>
+<p>Now, Let us exam each attribute,</p>
+<ul>
+<li><strong>PassengerID</strong>. <em>PassengerId</em> is an identifier, So only its uniqueness and missing value are considered.</li>
+</ul>
+<p>There are many ways you can use to find out. I simply check its total number and its unique number. If the both equal to the number of records in the dataset, it shows that there is no duplication and no missing values in the attribute.</p>
+<p>So we do,</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="data-attributes-assessment.html#cb8-1"></a><span class="co"># Exam PassengerID</span></span>
+<span id="cb8-2"><a href="data-attributes-assessment.html#cb8-2"></a></span>
+<span id="cb8-3"><a href="data-attributes-assessment.html#cb8-3"></a><span class="kw">length</span>(data<span class="op">$</span>PassengerId)</span></code></pre></div>
+<pre><code>## [1] 1309</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="data-attributes-assessment.html#cb10-1"></a><span class="kw">length</span>(<span class="kw">unique</span>(data<span class="op">$</span>PassengerId))</span></code></pre></div>
+<pre><code>## [1] 1309</code></pre>
+<p>The results shows the both number 1309, which is equal to the total number of records in the dataset. It proves the <em>PassengerID</em> has not missing value and duplication.</p>
+<ul>
+<li><strong>Survived</strong>. <em>Survived</em> is the attribute that its value will be produced by a model for the dataset <code>test</code>. It is called <strong>Consequencer</strong> in modeling contrast with other attributes. which are used to produce a prediction, are called <strong>Predictor</strong>. So, our exam will be conducted only on dataset <code>train</code>. Again we can check the numbers whether they can add up or not. As we already mentioned that it makes sense to change the <em>Servived</em> from type <code>chr</code> into <code>Factor</code>. We do,</li>
+</ul>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="data-attributes-assessment.html#cb12-1"></a><span class="co"># Exam Survived</span></span>
+<span id="cb12-2"><a href="data-attributes-assessment.html#cb12-2"></a>data<span class="op">$</span>Survived &lt;-<span class="st"> </span><span class="kw">as.factor</span>(data<span class="op">$</span>Survived)</span>
+<span id="cb12-3"><a href="data-attributes-assessment.html#cb12-3"></a><span class="kw">table</span>(data<span class="op">$</span>Survived)</span></code></pre></div>
+<pre><code>## 
+##   0   1  NA 
+## 549 342 418</code></pre>
+<p>The results proved that the <em>Survived</em> value has the correct numbers:</p>
+<ul>
+<li>418 ‘NA’ values are the <em>Survived</em>’s value in the dataset <code>test</code>, and</li>
+<li>the 549 death and 342 survived, together maded up the total number of dataset <code>train</code>, which is 891.</li>
+</ul>
+<p>So we know the value of <em>Survived</em> in the dataset <code>train</code> are correct and has no missing values. It is interesting here to think about the survive rate. How to calculate?</p>
+<p>I will do this,</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="data-attributes-assessment.html#cb14-1"></a><span class="co"># Calculate the survive rate in train data is 38% and the death rate is 61.61%</span></span>
+<span id="cb14-2"><a href="data-attributes-assessment.html#cb14-2"></a><span class="kw">prop.table</span>(<span class="kw">table</span>(<span class="kw">as.factor</span>(train<span class="op">$</span>Survived)))</span></code></pre></div>
+<pre><code>## 
+##         0         1 
+## 0.6161616 0.3838384</code></pre>
+<p>So we know the survive rate in the dataset <code>train</code> is about 61%. This is interesting because it reflects the overall survival rate.</p>
+<ul>
+<li><strong>Pclass</strong>. <em>Pclass</em> is the feature which splits the passengers into three division namely class-1, class-2, class-3. As we understood it should be in type of <code>Factor</code> rather than <code>int</code>. We shall change its type first and then to see if there missing value or errors. It is also good to know the survival rate in each class. So. we can compare with the overall survival rate in the dataset <code>train</code>.</li>
+</ul>
+<p>Copy the following code into your script.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="data-attributes-assessment.html#cb16-1"></a><span class="co"># Examine Pclass value,</span></span>
+<span id="cb16-2"><a href="data-attributes-assessment.html#cb16-2"></a><span class="co"># Look into Kaggle&#39;s explanation about Pclass: it is a proxy for social class i.e. rich or poor</span></span>
+<span id="cb16-3"><a href="data-attributes-assessment.html#cb16-3"></a><span class="co"># It should be factor and it does not make sense to stay in int.</span></span>
+<span id="cb16-4"><a href="data-attributes-assessment.html#cb16-4"></a>data<span class="op">$</span>Pclass &lt;-<span class="st"> </span><span class="kw">as.factor</span>(data<span class="op">$</span>Pclass)</span>
+<span id="cb16-5"><a href="data-attributes-assessment.html#cb16-5"></a>test<span class="op">$</span>Pclass &lt;-<span class="st"> </span><span class="kw">as.factor</span>(test<span class="op">$</span>Pclass)</span>
+<span id="cb16-6"><a href="data-attributes-assessment.html#cb16-6"></a>train<span class="op">$</span>Pclass &lt;-<span class="st"> </span><span class="kw">as.factor</span>(train<span class="op">$</span>Pclass)</span>
+<span id="cb16-7"><a href="data-attributes-assessment.html#cb16-7"></a></span>
+<span id="cb16-8"><a href="data-attributes-assessment.html#cb16-8"></a><span class="co"># Distribution across classes</span></span>
+<span id="cb16-9"><a href="data-attributes-assessment.html#cb16-9"></a><span class="kw">table</span>(data<span class="op">$</span>Pclass)</span></code></pre></div>
+<pre><code>## 
+##   1   2   3 
+## 323 277 709</code></pre>
+<p>If you want, you can check the total of the three classes which is 1309. It equals to the total number of records in the <code>data</code> (total number fo passenger). And there is no other numbers than 1,2 and 3. So we can conclude that there is no missing value and no errors in <em>Pcalss</em>.</p>
+<p>It will be interesting to see the survival rate for each class,</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="data-attributes-assessment.html#cb18-1"></a><span class="co"># Distribution across classes with survive</span></span>
+<span id="cb18-2"><a href="data-attributes-assessment.html#cb18-2"></a><span class="kw">table</span>(data<span class="op">$</span>Pclass, data<span class="op">$</span>Survived)</span></code></pre></div>
+<pre><code>##    
+##       0   1  NA
+##   1  80 136 107
+##   2  97  87  93
+##   3 372 119 218</code></pre>
+<p>These numbers tell us many things:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>The death distribution</strong>. Among the three classes from class-1 to class-3 is: 80, 97 and 379. It confirms that the passenger in Class-3 has largest number of death (372);</p></li>
+<li><p><strong>The survival distribution</strong>. Among the three classes, class-1 has the highest number of survival (136);</p></li>
+<li><p><strong>The passengers distribution</strong>. Among the three classes, class-3 has the largest passenger numbers (372+119+218) in total, and overtaking other two classes together for both datasets <code>train</code> and <code>test</code> (372+119) &gt; ((80+97) + (136+87)).</p></li>
+<li><p>The last column is the pasenger distribution among the three glasses for dataset <code>test</code>. This is because its <em>Survived</em> value is “NA” (not defined).</p></li>
+</ol>
+<p>We can calculate distributions among the three classes in terms of percentage.</p>
+<ol style="list-style-type: decimal">
+<li>The overall passenger’s distribution among the three classes:</li>
+</ol>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="data-attributes-assessment.html#cb20-1"></a><span class="co"># Calculate the distribution on Pclass</span></span>
+<span id="cb20-2"><a href="data-attributes-assessment.html#cb20-2"></a><span class="co"># Overall passenger distribution on classes.</span></span>
+<span id="cb20-3"><a href="data-attributes-assessment.html#cb20-3"></a><span class="kw">prop.table</span>(<span class="kw">table</span>(<span class="kw">as.factor</span>(data<span class="op">$</span>Pclass)))</span></code></pre></div>
+<pre><code>## 
+##         1         2         3 
+## 0.2467532 0.2116119 0.5416348</code></pre>
+<p>That is 24.67% passenger in Class-1, 21.16% passenger is class-2 and 54.16% of passenger in class-3.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>The passenger’s distribution among the three classes given by dataset <code>train</code>:</li>
+</ol>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="data-attributes-assessment.html#cb22-1"></a><span class="co"># Train data passenger distribution on classes.</span></span>
+<span id="cb22-2"><a href="data-attributes-assessment.html#cb22-2"></a><span class="kw">prop.table</span>(<span class="kw">table</span>(<span class="kw">as.factor</span>(train<span class="op">$</span>Pclass)))</span></code></pre></div>
+<pre><code>## 
+##         1         2         3 
+## 0.2424242 0.2065095 0.5510662</code></pre>
+<p>The number tells us the distribution of passengers from dataset <code>train</code> is: class-1, 24.24%; class-2, 20.65% and class-3 has 55.1%.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>The passenger’s distribution among the three classes given by dataset <code>test</code>:</li>
+</ol>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="data-attributes-assessment.html#cb24-1"></a><span class="co"># Test data passenger distribution on classes.</span></span>
+<span id="cb24-2"><a href="data-attributes-assessment.html#cb24-2"></a><span class="kw">prop.table</span>(<span class="kw">table</span>(<span class="kw">as.factor</span>(test<span class="op">$</span>Pclass)))</span></code></pre></div>
+<pre><code>## 
+##         1         2         3 
+## 0.2559809 0.2224880 0.5215311</code></pre>
+<p>Lastly, the passenger distribution from dataset <code>test</code> are: 25.6% in class-1, 22.24% in class-2 and 52.15% percent in class-3.</p>
+<p>We can see that the distribution of passengers, in terms of percentage, among the three classes are almost identical both in order and in proportion. That is the most passenger are in class-3, then class-1 and finally class-2.</p>
+<p>Let us look into death and survive distribution among the three classes<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>,</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="data-attributes-assessment.html#cb26-1"></a><span class="co"># Calculate death distribution across classes with Train data</span></span>
+<span id="cb26-2"><a href="data-attributes-assessment.html#cb26-2"></a>SurviveOverClass &lt;-<span class="st"> </span><span class="kw">table</span>(train<span class="op">$</span>Pclass, train<span class="op">$</span>Survived)</span>
+<span id="cb26-3"><a href="data-attributes-assessment.html#cb26-3"></a><span class="co"># Convert SurviveOverClass into data frame</span></span>
+<span id="cb26-4"><a href="data-attributes-assessment.html#cb26-4"></a>SoC.data.fram &lt;-<span class="st"> </span><span class="kw">data.frame</span>(SurviveOverClass) </span>
+<span id="cb26-5"><a href="data-attributes-assessment.html#cb26-5"></a><span class="co"># Retrieve death distribution in classes</span></span>
+<span id="cb26-6"><a href="data-attributes-assessment.html#cb26-6"></a>Death.distribution.on.class &lt;-<span class="st"> </span>SoC.data.fram<span class="op">$</span>Freq[SoC.data.fram<span class="op">$</span>Var2<span class="op">==</span><span class="dv">0</span>]</span>
+<span id="cb26-7"><a href="data-attributes-assessment.html#cb26-7"></a><span class="kw">prop.table</span>(Death.distribution.on.class)</span></code></pre></div>
+<pre><code>## [1] 0.1457195 0.1766849 0.6775956</code></pre>
+<p>These numbers tell us the distribution of death among the three classes are: 14.57% death from class-1, 17.66% from class-2 and 67.75% death from class-3.</p>
+<p>Similarly, we can calculate survive distribution among the three classes,</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="data-attributes-assessment.html#cb28-1"></a><span class="co"># calculate survive distribution among the three classes</span></span>
+<span id="cb28-2"><a href="data-attributes-assessment.html#cb28-2"></a>Survive.distribution.on.class &lt;-<span class="st"> </span>SoC.data.fram<span class="op">$</span>Freq[SoC.data.fram<span class="op">$</span>Var2<span class="op">==</span><span class="dv">1</span>]</span>
+<span id="cb28-3"><a href="data-attributes-assessment.html#cb28-3"></a><span class="kw">prop.table</span>(Survive.distribution.on.class)</span></code></pre></div>
+<pre><code>## [1] 0.3976608 0.2543860 0.3479532</code></pre>
+<p>The results tell us that 39.76% of survived passenger are from class-1, and 25.43% from class-2, and 34.79% from class-3.</p>
+<p>Let us thinking about this numbers. Class-3 has 55.1% of passenger distribution but has 34.79% passenger survival distribution. Clearly, the survive rate in class-3 is lower than other two classes. It is equivalent to say, <strong>the survival chances of a passenger who is in class-1 are higher than who is a class-2 and class-3</strong>.</p>
+
+<div class="rmdaction">
+<p>Do it yourself:</p>
+Calculate the Survival rate among the three classes. What conclusion you have by compare them?
+</div>
+
+<p>Numbers are good to provide summary and test some assumptions. Analyzing given data by means of statistical summary and other numbering methods is called <strong>Descriptive analysis</strong>. See section <a href="process.html#analyse"><strong>??</strong></a> .</p>
+<p>Perhaps, it is a good time to introduce <strong>Exploratory analysis</strong>, on the contrast with the Descriptive analysis, it uses graphical tools to explore the inside of given datasets.</p>
+<p>To do so, we need to import some useful graphical tools provided by R community. We can then use them plot <em>Survived</em> as an factor on Pclass numbers.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="data-attributes-assessment.html#cb30-1"></a><span class="co"># Load up ggplot2 package to use for visualizations</span></span>
+<span id="cb30-2"><a href="data-attributes-assessment.html#cb30-2"></a><span class="kw">library</span>(ggplot2)</span></code></pre></div>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.6.3</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="data-attributes-assessment.html#cb32-1"></a><span class="kw">ggplot</span>(train, <span class="kw">aes</span>(<span class="dt">x =</span> Pclass, <span class="dt">fill =</span> <span class="kw">factor</span>(Survived))) <span class="op">+</span></span>
+<span id="cb32-2"><a href="data-attributes-assessment.html#cb32-2"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">width =</span> <span class="fl">0.5</span>) <span class="op">+</span></span>
+<span id="cb32-3"><a href="data-attributes-assessment.html#cb32-3"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Pclass&quot;</span>) <span class="op">+</span></span>
+<span id="cb32-4"><a href="data-attributes-assessment.html#cb32-4"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Total Count&quot;</span>) <span class="op">+</span></span>
+<span id="cb32-5"><a href="data-attributes-assessment.html#cb32-5"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">fill =</span> <span class="st">&quot;Survived&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:Survivalrate"></span>
+<img src="Do-Data-Science-in-10-Hours_files/figure-html/Survivalrate-1.svg" alt="Total count and survive rate of passenger on Pcalss." width="672" />
+<p class="caption">
+Figure 4.5: Total count and survive rate of passenger on Pcalss.
+</p>
+</div>
+<p>Graph is better, isn’t it? It is very intuative.</p>
+<p>Let’s briefly interpret this graph. The graph shown <a href="data-attributes-assessment.html#fig:Survivalrate">4.5</a> tells us that the survive rate in Class-3 is the worst, and followed by class-2 and lastly, class-1. More people perished in the class-3 than any other two classes. It provides an important point that the chance of survive is associated with the <strong>social glass</strong>, if we can prove the Class-3 ticket is cheaper.</p>
+<p>To sum up the analysis with Pclass, We have used both <strong>Descriptive analysis</strong> and <strong>Exploratory analysis</strong>. The results suggested that <strong>the <em>Pclass</em> has a strong relation with death rate</strong>. That is passengers in Class-3 have a higher chance of death. The correlation with social class (richer or poor) is waiting to be proved if the class-3 ticket is cheaper than others.</p>
+<ul>
+<li><strong>Name</strong>. <em>Name</em> attribute by definition shows peoples’ name. It should not have any impact on passengers’ lived or dead, shouldn’t it? It may only have more chance of errors and typos since the long characters rather than anything predictive for the survival.</li>
+</ul>
+<p>Firstly, you may notice that the type of <em>Name</em> is a <code>Factor</code>, which we really don’t want. Factor shows the uniqueness, it can prevent us to explore the details of its content, which naturally are characters or strings.
+To Explore <em>Name</em>, we will do,</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="data-attributes-assessment.html#cb33-1"></a><span class="co"># Convert Name type</span></span>
+<span id="cb33-2"><a href="data-attributes-assessment.html#cb33-2"></a>data<span class="op">$</span>Name &lt;-<span class="st"> </span><span class="kw">as.character</span>(data<span class="op">$</span>Name)</span>
+<span id="cb33-3"><a href="data-attributes-assessment.html#cb33-3"></a><span class="co"># Explore the contents</span></span>
+<span id="cb33-4"><a href="data-attributes-assessment.html#cb33-4"></a><span class="kw">head</span>(data<span class="op">$</span>Name)</span></code></pre></div>
+<pre><code>## [1] &quot;Braund, Mr. Owen Harris&quot;                            
+## [2] &quot;Cumings, Mrs. John Bradley (Florence Briggs Thayer)&quot;
+## [3] &quot;Heikkinen, Miss. Laina&quot;                             
+## [4] &quot;Futrelle, Mrs. Jacques Heath (Lily May Peel)&quot;       
+## [5] &quot;Allen, Mr. William Henry&quot;                           
+## [6] &quot;Moran, Mr. James&quot;</code></pre>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="data-attributes-assessment.html#cb35-1"></a><span class="co"># You can check head function ?head</span></span></code></pre></div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="2">
+<li id="fn2"><p>This code is not brilliant. It used many intermediate variables, you can check their structure and contents from <strong>WorkSpace pane</strong>. You can come up with a better code.<a href="data-attributes-assessment.html#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="assess-data-quantity.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-recods-level-assessment.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown/edit/master/inst/examples/04-understand-data.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Do Data Science in 10 Hours.pdf", "Do Data Science in 10 Hours.epub", "Do Data Science in 10 Hours.mobi"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
