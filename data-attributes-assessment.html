@@ -24,7 +24,7 @@
 <meta name="author" content="Gangmin Li" />
 
 
-<meta name="date" content="2020-10-03" />
+<meta name="date" content="2020-10-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -224,9 +224,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="exercises-4.html"><a href="exercises-4.html"><i class="fa fa-check"></i>Exercises 4</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="data-preprocess.html"><a href="data-preprocess.html"><i class="fa fa-check"></i><b>5</b> Data PreProcess</a><ul>
-<li class="chapter" data-level="5.1" data-path="explore-realtions-for-survivle.html"><a href="explore-realtions-for-survivle.html"><i class="fa fa-check"></i><b>5.1</b> explore realtions for survivle</a></li>
+<li class="chapter" data-level="5.1" data-path="dealt-with-miss-values-and-errors-age.html"><a href="dealt-with-miss-values-and-errors-age.html"><i class="fa fa-check"></i><b>5.1</b> Dealt with Miss values and Errors (Age, )</a></li>
+<li class="chapter" data-level="5.2" data-path="attributes-selection-prediction-power.html"><a href="attributes-selection-prediction-power.html"><i class="fa fa-check"></i><b>5.2</b> Attributes selection (prediction power)</a></li>
+<li class="chapter" data-level="5.3" data-path="attribute-reengineering-title-from-name-treval-famail-relatives-alone-from-parch-and-sibsb.html"><a href="attribute-reengineering-title-from-name-treval-famail-relatives-alone-from-parch-and-sibsb.html"><i class="fa fa-check"></i><b>5.3</b> Attribute reengineering ( title from name, treval famail _ relatives, alone from ParCh and SibSb)</a></li>
+<li class="chapter" data-level="5.4" data-path="assemble-final-datasets-for-modelling.html"><a href="assemble-final-datasets-for-modelling.html"><i class="fa fa-check"></i><b>5.4</b> Assemble final datasets for modelling</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="data-analysis.html"><a href="data-analysis.html"><i class="fa fa-check"></i><b>6</b> Data Analysis</a></li>
+<li class="chapter" data-level="6" data-path="data-analysis.html"><a href="data-analysis.html"><i class="fa fa-check"></i><b>6</b> Data Analysis</a><ul>
+<li class="chapter" data-level="6.1" data-path="modelsprediction.html"><a href="modelsprediction.html"><i class="fa fa-check"></i><b>6.1</b> models:Prediction</a></li>
+<li class="chapter" data-level="6.2" data-path="evaluation.html"><a href="evaluation.html"><i class="fa fa-check"></i><b>6.2</b> Evaluation</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="result-interpretation.html"><a href="result-interpretation.html"><i class="fa fa-check"></i><b>7</b> Result Interpretation</a></li>
 <li class="chapter" data-level="8" data-path="data-report.html"><a href="data-report.html"><i class="fa fa-check"></i><b>8</b> Data Report</a></li>
 <li class="chapter" data-level="" data-path="reference.html"><a href="reference.html"><i class="fa fa-check"></i>Reference</a><ul>
@@ -531,7 +537,7 @@ Calculate the Survival rate among the three classes. What conclusion you have by
 
 <p>Numbers are good to provide summary and test some assumptions. Analyzing given data by means of statistical summary and other numbering methods is called <strong>Descriptive analysis</strong>. See section <a href="process.html#analyse"><strong>??</strong></a> .</p>
 <p>Perhaps, it is a good time to introduce <strong>Exploratory analysis</strong>, on the contrast with the Descriptive analysis, it uses graphical tools to explore the inside of given datasets.</p>
-<p>To do so, we need to import some useful graphical tools provided by R community. We can then use them plot <em>Survived</em> as an factor on Pclass numbers.</p>
+<p>To do so, we need to import some useful graphical tools provided by R community. We can then use them to plot <em>Survived</em> as an factor on <em>Pclass</em> numbers.</p>
 <div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="data-attributes-assessment.html#cb30-1"></a><span class="co"># Load up ggplot2 package to use for visualizations</span></span>
 <span id="cb30-2"><a href="data-attributes-assessment.html#cb30-2"></a><span class="kw">library</span>(ggplot2)</span></code></pre></div>
 <pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.6.3</code></pre>
@@ -550,21 +556,96 @@ Figure 4.5: Total count and survive rate of passenger on Pcalss.
 <p>Let’s briefly interpret this graph. The graph shown <a href="data-attributes-assessment.html#fig:Survivalrate">4.5</a> tells us that the survive rate in Class-3 is the worst, and followed by class-2 and lastly, class-1. More people perished in the class-3 than any other two classes. It provides an important point that the chance of survive is associated with the <strong>social glass</strong>, if we can prove the Class-3 ticket is cheaper.</p>
 <p>To sum up the analysis with Pclass, We have used both <strong>Descriptive analysis</strong> and <strong>Exploratory analysis</strong>. The results suggested that <strong>the <em>Pclass</em> has a strong relation with death rate</strong>. That is passengers in Class-3 have a higher chance of death. The correlation with social class (richer or poor) is waiting to be proved if the class-3 ticket is cheaper than others.</p>
 <ul>
-<li><strong>Name</strong>. <em>Name</em> attribute by definition shows peoples’ name. It should not have any impact on passengers’ lived or dead, shouldn’t it? It may only have more chance of errors and typos since the long characters rather than anything predictive for the survival.</li>
+<li><strong>Name</strong>. <em>Name</em> attribute by definition shows peoples’ name. It should not have any impact on passengers’ live and death. Never heard of someone was survived because one’s name!
+However we still need to asess its quality. Fir</li>
 </ul>
-<p>Firstly, you may notice that the type of <em>Name</em> is a <code>Factor</code>, which we really don’t want. Factor shows the uniqueness, it can prevent us to explore the details of its content, which naturally are characters or strings.
-To Explore <em>Name</em>, we will do,</p>
+<p>Firstly, you may notice that the type of <em>Name</em> is a <code>Factor</code>, which is contradicted with the conventional understanding that name is a string or a list characters. Type <code>chr</code> would be more appropriate. Change its type to <code>chr</code> will help us to apply character functions to it and get it contents easily. Factor shows the uniqueness. it could help us to assess if there is missing value or duplicated values.</p>
+<p>Notice that attribute <em>Name</em> only has 1307 levels (can be observed from the <code>data</code> structure on the <strong>WorkSpace pane</strong>). In addition, the <code>data</code> summary, see Figure <a href="#fig:summaryofdata"><strong>??</strong></a>, not only confirmed this but also identified the two shorts because of the value “Connolly, Miss. Kate” and “Kelly, Mr. James” have been repeated twice each.</p>
+<p>Let us explore <em>Name</em> values in details.
+Firstly, let us convert <em>Name</em> type into <code>chr</code>. Then we can check duplicated names using <code>which</code> function in R to get the duplicate names and store them into a vector <code>dup.names</code>. And echo them out.</p>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="data-attributes-assessment.html#cb33-1"></a><span class="co"># Convert Name type</span></span>
 <span id="cb33-2"><a href="data-attributes-assessment.html#cb33-2"></a>data<span class="op">$</span>Name &lt;-<span class="st"> </span><span class="kw">as.character</span>(data<span class="op">$</span>Name)</span>
-<span id="cb33-3"><a href="data-attributes-assessment.html#cb33-3"></a><span class="co"># Explore the contents</span></span>
-<span id="cb33-4"><a href="data-attributes-assessment.html#cb33-4"></a><span class="kw">head</span>(data<span class="op">$</span>Name)</span></code></pre></div>
-<pre><code>## [1] &quot;Braund, Mr. Owen Harris&quot;                            
-## [2] &quot;Cumings, Mrs. John Bradley (Florence Briggs Thayer)&quot;
-## [3] &quot;Heikkinen, Miss. Laina&quot;                             
-## [4] &quot;Futrelle, Mrs. Jacques Heath (Lily May Peel)&quot;       
-## [5] &quot;Allen, Mr. William Henry&quot;                           
-## [6] &quot;Moran, Mr. James&quot;</code></pre>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="data-attributes-assessment.html#cb35-1"></a><span class="co"># You can check head function ?head</span></span></code></pre></div>
+<span id="cb33-3"><a href="data-attributes-assessment.html#cb33-3"></a><span class="co"># Find the two duplicate names</span></span>
+<span id="cb33-4"><a href="data-attributes-assessment.html#cb33-4"></a><span class="co"># First used which function to get the duplicate names and store them as a vector dup.names </span></span>
+<span id="cb33-5"><a href="data-attributes-assessment.html#cb33-5"></a><span class="co"># check it up ?which.</span></span>
+<span id="cb33-6"><a href="data-attributes-assessment.html#cb33-6"></a>dup.names &lt;-<span class="st"> </span>data[<span class="kw">which</span>(<span class="kw">duplicated</span>(data<span class="op">$</span>Name)), <span class="st">&quot;Name&quot;</span>]</span>
+<span id="cb33-7"><a href="data-attributes-assessment.html#cb33-7"></a></span>
+<span id="cb33-8"><a href="data-attributes-assessment.html#cb33-8"></a><span class="co"># Echo out </span></span>
+<span id="cb33-9"><a href="data-attributes-assessment.html#cb33-9"></a>dup.names</span></code></pre></div>
+<pre><code>## [1] &quot;Kelly, Mr. James&quot;     &quot;Connolly, Miss. Kate&quot;</code></pre>
+<p>Our code confirmed that the two duplicated names are indeed "“Kelly, Mr. James” and “Connolly, Miss. Kate”. It comes no surprise that the both names are pretty common in UK and USA.</p>
+<p>One discovery though is that the names appeared has a title in it! <strong>Mr.</strong> is used in Kelly James and <strong>Miss.</strong> is used in Connolly Kate. This could be interesting. We can leave this for <strong>Preprocess</strong> to explore more. For the quality assessment it is mission accomplished.</p>
+<ul>
+<li><strong>Sex</strong>. <em>Sex</em> attribute value aseessment is simple. It only has two values “male” and “female”. We could easily check if there are missing values and any errors.</li>
+</ul>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="data-attributes-assessment.html#cb35-1"></a><span class="co"># Retrial male and females. then check their numbers. </span></span>
+<span id="cb35-2"><a href="data-attributes-assessment.html#cb35-2"></a>males &lt;-<span class="st"> </span>data[<span class="kw">which</span>(data<span class="op">$</span>Sex <span class="op">==</span><span class="st"> &quot;male&quot;</span>), ]</span>
+<span id="cb35-3"><a href="data-attributes-assessment.html#cb35-3"></a>females &lt;-<span class="st"> </span>data[<span class="kw">which</span>(data<span class="op">$</span>Sex <span class="op">==</span><span class="st"> &quot;female&quot;</span>), ]</span>
+<span id="cb35-4"><a href="data-attributes-assessment.html#cb35-4"></a><span class="kw">nrow</span>(males)</span></code></pre></div>
+<pre><code>## [1] 843</code></pre>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="data-attributes-assessment.html#cb37-1"></a><span class="kw">nrow</span>(females)</span></code></pre></div>
+<pre><code>## [1] 466</code></pre>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="data-attributes-assessment.html#cb39-1"></a><span class="kw">nrow</span>(males) <span class="op">+</span><span class="st"> </span><span class="kw">nrow</span>(females)</span></code></pre></div>
+<pre><code>## [1] 1309</code></pre>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="data-attributes-assessment.html#cb41-1"></a><span class="co"># If you prefer you cna use data.table functions</span></span></code></pre></div>
+<p>It is obvious that there is no error and missing values.</p>
+<p>It is also simple to explore the relationship between gender and the survival rate. We had an assumption that the male passengers have a high death rate. We plot tools in our disposal, let’s make use of it.</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="data-attributes-assessment.html#cb42-1"></a><span class="co"># plot death over sex</span></span>
+<span id="cb42-2"><a href="data-attributes-assessment.html#cb42-2"></a><span class="kw">ggplot</span>(data[<span class="dv">1</span><span class="op">:</span><span class="dv">891</span>,], <span class="kw">aes</span>(<span class="dt">x =</span> Sex, <span class="dt">fill =</span> Survived)) <span class="op">+</span></span>
+<span id="cb42-3"><a href="data-attributes-assessment.html#cb42-3"></a><span class="st">  </span><span class="kw">geom_bar</span>() <span class="op">+</span></span>
+<span id="cb42-4"><a href="data-attributes-assessment.html#cb42-4"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Sex&quot;</span>) <span class="op">+</span></span>
+<span id="cb42-5"><a href="data-attributes-assessment.html#cb42-5"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Total Count&quot;</span>) <span class="op">+</span></span>
+<span id="cb42-6"><a href="data-attributes-assessment.html#cb42-6"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">fill =</span> <span class="st">&quot;Survived&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:Survivalrateonsex"></span>
+<img src="Do-Data-Science-in-10-Hours_files/figure-html/Survivalrateonsex-1.svg" alt="Total count and survive rate of passenger on sex." width="672" />
+<p class="caption">
+Figure 4.6: Total count and survive rate of passenger on sex.
+</p>
+</div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="data-attributes-assessment.html#cb43-1"></a><span class="co"># can we use dataset `train`? rather than data?</span></span></code></pre></div>
+<p>The graph shows that the male death rate is much higher than female passengers.</p>
+<ul>
+<li><strong>Age</strong>. To examine attribute <em>Age</em>, we do this,</li>
+</ul>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="data-attributes-assessment.html#cb44-1"></a><span class="co"># Examine Age over data, train and test.</span></span>
+<span id="cb44-2"><a href="data-attributes-assessment.html#cb44-2"></a><span class="kw">summary</span>(data<span class="op">$</span>Age)</span></code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
+##    0.17   21.00   28.00   29.88   39.00   80.00     263</code></pre>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="data-attributes-assessment.html#cb46-1"></a><span class="kw">summary</span>(train<span class="op">$</span>Age)</span></code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
+##    0.42   20.12   28.00   29.70   38.00   80.00     177</code></pre>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="data-attributes-assessment.html#cb48-1"></a><span class="kw">summary</span>(test<span class="op">$</span>Age)</span></code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
+##    0.17   21.00   27.00   30.27   39.00   76.00      86</code></pre>
+<p>It is obvious that <em>Age</em> has many problems:
+1. Age has decimal point. It is a surprise. not sure it is a mistake.
+2. there are large number of missing values: 177 missing value in dataset <code>train</code> and 86 missing value in dataset <code>test</code>, in total of 263, which count as 263/1309 = 20%.</p>
+<p>However, we still could have a brief assessment on its impact on survive rate, despict the 177 missing values.</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="data-attributes-assessment.html#cb50-1"></a><span class="kw">ggplot</span>(data[<span class="dv">1</span><span class="op">:</span><span class="dv">891</span>,], <span class="kw">aes</span>(<span class="dt">x =</span> Age, <span class="dt">fill =</span> Survived)) <span class="op">+</span></span>
+<span id="cb50-2"><a href="data-attributes-assessment.html#cb50-2"></a><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">10</span>) <span class="op">+</span></span>
+<span id="cb50-3"><a href="data-attributes-assessment.html#cb50-3"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Age&quot;</span>) <span class="op">+</span></span>
+<span id="cb50-4"><a href="data-attributes-assessment.html#cb50-4"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Total Count&quot;</span>)</span></code></pre></div>
+<pre><code>## Warning: Removed 177 rows containing non-finite values (stat_bin).</code></pre>
+<div class="figure"><span id="fig:unnamed-chunk-22"></span>
+<img src="Do-Data-Science-in-10-Hours_files/figure-html/unnamed-chunk-22-1.svg" alt="Survive rate of passenger on age." width="672" />
+<p class="caption">
+Figure 4.7: Survive rate of passenger on age.
+</p>
+</div>
+<p>The graph shows the relationship between <em>Age</em> and survival rate. It becomes apparent that age group between 15 and 25 has the worst survival rate. It is also interesting to know that there are some age has values less than 0!</p>
+<p>Therefore, we could conclude that.</p>
+<p>The attribute <em>Age</em> has a serious quality problem: some age values are negtive and large number 177 values are missing. If it is to be used as a predictor in our model for prediction, it needs a lot of work in the stage of preprocess.</p>
+<ul>
+<li><strong>SibSp</strong> and <strong>ParCh</strong>. To examine attribute <em>Age</em>, we do this,</li>
+</ul>
+<p>#plot the 3-way relationship of sex, pclass, and survival
+ggplot(data[1:891,], aes(x = Sex, fill = Survived)) +
+geom_bar() +
+facet_wrap(~Pclass) +
+ggtitle(“Pclass”) +
+xlab(“Sex”) +
+ylab(“Total Count”) +
+labs(fill = “Survived”)</p>
 </div>
 </div>
 <div class="footnotes">

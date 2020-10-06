@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4.5 Actual Data Attributes Value Examination | Do Data Science in 10 Hours</title>
+  <meta name="description" content="This is my first book writtn using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4.5 Actual Data Attributes Value Examination | Do Data Science in 10 Hours" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is my first book writtn using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4.5 Actual Data Attributes Value Examination | Do Data Science in 10 Hours" />
+  
+  <meta name="twitter:description" content="This is my first book writtn using the bookdown package to write a book. The output format for this book is bookdown::gitbook." />
+  
+
+<meta name="author" content="Gangmin Li" />
+
+
+<meta name="date" content="2020-10-04" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="actual-attributes-types-examination.html"/>
+<link rel="next" href="data-recods-level-assessment.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="css\style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Authoring Books with R Markdown</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section"></a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="0.1" data-path="what-is-this-book-why-to-read-it.html"><a href="what-is-this-book-why-to-read-it.html"><i class="fa fa-check"></i><b>0.1</b> What is this book? Why to read it?</a></li>
+<li class="chapter" data-level="0.2" data-path="structure-of-the-book.html"><a href="structure-of-the-book.html"><i class="fa fa-check"></i><b>0.2</b> Structure of the Book</a></li>
+<li class="chapter" data-level="0.3" data-path="what-can-this-course-offer-you.html"><a href="what-can-this-course-offer-you.html"><i class="fa fa-check"></i><b>0.3</b> What Can This Course Offer You?</a></li>
+<li class="chapter" data-level="0.4" data-path="schedule.html"><a href="schedule.html"><i class="fa fa-check"></i><b>0.4</b> Schedule</a></li>
+<li class="chapter" data-level="0.5" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i><b>0.5</b> Notes</a></li>
+<li class="chapter" data-level="0.6" data-path="convention.html"><a href="convention.html"><i class="fa fa-check"></i><b>0.6</b> Convention</a></li>
+<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="what-is-data-science.html"><a href="what-is-data-science.html"><i class="fa fa-check"></i><b>1.1</b> What is Data Science?</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="what-is-data-science.html"><a href="what-is-data-science.html#data-science-as-discovery-of-data-insight"><i class="fa fa-check"></i><b>1.1.1</b> Data science as Discovery of Data Insight</a></li>
+<li class="chapter" data-level="1.1.2" data-path="what-is-data-science.html"><a href="what-is-data-science.html#data-science-as-development-of-data-product"><i class="fa fa-check"></i><b>1.1.2</b> Data science as Development of Data Product</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="what-is-data-scientist.html"><a href="what-is-data-scientist.html"><i class="fa fa-check"></i><b>1.2</b> What is Data Scientist?</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="what-is-data-scientist.html"><a href="what-is-data-scientist.html#the-requisite-skill-set"><i class="fa fa-check"></i><b>1.2.1</b> The Requisite Skill Set</a></li>
+<li class="chapter" data-level="1.2.2" data-path="what-is-data-scientist.html"><a href="what-is-data-scientist.html#how-to-become-a-data-scientist"><i class="fa fa-check"></i><b>1.2.2</b> How to Become a Data Scientist?</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="process.html"><a href="process.html"><i class="fa fa-check"></i><b>1.3</b> Process of Doing Data Science</a><ul>
+<li class="chapter" data-level="" data-path="process.html"><a href="process.html#step1"><i class="fa fa-check"></i>Step 1: Understand the Problem - Define Objectives</a></li>
+<li class="chapter" data-level="" data-path="process.html"><a href="process.html#step2"><i class="fa fa-check"></i>Step 2: Undertand Data</a></li>
+<li class="chapter" data-level="" data-path="process.html"><a href="process.html#preprocess"><i class="fa fa-check"></i>Step 3: Data Preprocess</a></li>
+<li class="chapter" data-level="" data-path="process.html"><a href="process.html#analyse"><i class="fa fa-check"></i>Step 4: Analyze Data</a></li>
+<li class="chapter" data-level="" data-path="process.html"><a href="process.html#step-5-results-interpretation-and-evaluation"><i class="fa fa-check"></i>Step 5: Results Interpretation and Evaluation</a></li>
+<li class="chapter" data-level="" data-path="process.html"><a href="process.html#step-6-data-report-and-communication"><i class="fa fa-check"></i>Step 6: Data Report and Communication)</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="tools-used-in-doing-a-data-science-project.html"><a href="tools-used-in-doing-a-data-science-project.html"><i class="fa fa-check"></i><b>1.4</b> Tools used in Doing a Data Science Project</a><ul>
+<li class="chapter" data-level="" data-path="tools-used-in-doing-a-data-science-project.html"><a href="tools-used-in-doing-a-data-science-project.html#r"><i class="fa fa-check"></i>R</a></li>
+<li class="chapter" data-level="" data-path="tools-used-in-doing-a-data-science-project.html"><a href="tools-used-in-doing-a-data-science-project.html#python"><i class="fa fa-check"></i>Python</a></li>
+<li class="chapter" data-level="" data-path="tools-used-in-doing-a-data-science-project.html"><a href="tools-used-in-doing-a-data-science-project.html#sql"><i class="fa fa-check"></i>SQL</a></li>
+<li class="chapter" data-level="" data-path="tools-used-in-doing-a-data-science-project.html"><a href="tools-used-in-doing-a-data-science-project.html#hadoop"><i class="fa fa-check"></i>Hadoop</a></li>
+<li class="chapter" data-level="" data-path="tools-used-in-doing-a-data-science-project.html"><a href="tools-used-in-doing-a-data-science-project.html#tableau"><i class="fa fa-check"></i>Tableau</a></li>
+<li class="chapter" data-level="" data-path="tools-used-in-doing-a-data-science-project.html"><a href="tools-used-in-doing-a-data-science-project.html#weka"><i class="fa fa-check"></i>Weka</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="applications-of-data-science.html"><a href="applications-of-data-science.html"><i class="fa fa-check"></i><b>1.5</b> Applications of Data Science</a><ul>
+<li class="chapter" data-level="" data-path="applications-of-data-science.html"><a href="applications-of-data-science.html#data-science-in-healthcare"><i class="fa fa-check"></i>Data Science in Healthcare</a></li>
+<li class="chapter" data-level="" data-path="applications-of-data-science.html"><a href="applications-of-data-science.html#data-science-in-e-commerce"><i class="fa fa-check"></i>Data Science in E-commerce</a></li>
+<li class="chapter" data-level="" data-path="applications-of-data-science.html"><a href="applications-of-data-science.html#data-science-in-manufacturing"><i class="fa fa-check"></i>Data Science in Manufacturing</a></li>
+<li class="chapter" data-level="" data-path="applications-of-data-science.html"><a href="applications-of-data-science.html#data-science-as-conversational-agents"><i class="fa fa-check"></i>Data Science as Conversational Agents</a></li>
+<li class="chapter" data-level="" data-path="applications-of-data-science.html"><a href="applications-of-data-science.html#data-science-in-transport"><i class="fa fa-check"></i>Data Science in Transport</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="summary.html"><a href="summary.html"><i class="fa fa-check"></i>Summary</a></li>
+<li class="chapter" data-level="" data-path="exercise-1.html"><a href="exercise-1.html"><i class="fa fa-check"></i>Exercise 1</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="tools.html"><a href="tools.html"><i class="fa fa-check"></i><b>2</b> Get Your Tools Ready</a><ul>
+<li class="chapter" data-level="2.1" data-path="brief-introductiuon-about-r-and-rstudio.html"><a href="brief-introductiuon-about-r-and-rstudio.html"><i class="fa fa-check"></i><b>2.1</b> Brief introductiuon about R and RStudio</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="brief-introductiuon-about-r-and-rstudio.html"><a href="brief-introductiuon-about-r-and-rstudio.html#features-of-r-programming"><i class="fa fa-check"></i><b>2.1.1</b> Features of R Programming</a></li>
+<li class="chapter" data-level="2.1.2" data-path="brief-introductiuon-about-r-and-rstudio.html"><a href="brief-introductiuon-about-r-and-rstudio.html#r-scripts"><i class="fa fa-check"></i><b>2.1.2</b> R Scripts</a></li>
+<li class="chapter" data-level="2.1.3" data-path="brief-introductiuon-about-r-and-rstudio.html"><a href="brief-introductiuon-about-r-and-rstudio.html#r-graphical-user-interface-rgui"><i class="fa fa-check"></i><b>2.1.3</b> R Graphical User Interface (RGui)</a></li>
+<li class="chapter" data-level="2.1.4" data-path="brief-introductiuon-about-r-and-rstudio.html"><a href="brief-introductiuon-about-r-and-rstudio.html#rstudio"><i class="fa fa-check"></i><b>2.1.4</b> RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="downlaod-and-install-r-and-rstudio.html"><a href="downlaod-and-install-r-and-rstudio.html"><i class="fa fa-check"></i><b>2.2</b> Downlaod and Install R and RStudio</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="downlaod-and-install-r-and-rstudio.html"><a href="downlaod-and-install-r-and-rstudio.html#r-download-and-installation"><i class="fa fa-check"></i><b>2.2.1</b> R Download and Installation</a></li>
+<li class="chapter" data-level="2.2.2" data-path="downlaod-and-install-r-and-rstudio.html"><a href="downlaod-and-install-r-and-rstudio.html#rstudio-download-and-installation"><i class="fa fa-check"></i><b>2.2.2</b> RStudio Download and Installation</a></li>
+<li class="chapter" data-level="2.2.3" data-path="downlaod-and-install-r-and-rstudio.html"><a href="downlaod-and-install-r-and-rstudio.html#rs"><i class="fa fa-check"></i><b>2.2.3</b> Familiar with RStudio interface</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="bootsup-your-rstudio.html"><a href="bootsup-your-rstudio.html"><i class="fa fa-check"></i><b>2.3</b> Bootsup your RStudio</a></li>
+<li class="chapter" data-level="2.4" data-path="instructions.html"><a href="instructions.html"><i class="fa fa-check"></i><b>2.4</b> Instructions</a><ul>
+<li class="chapter" data-level="" data-path="instructions.html"><a href="instructions.html#code"><i class="fa fa-check"></i>Code</a></li>
+<li class="chapter" data-level="" data-path="instructions.html"><a href="instructions.html#tips"><i class="fa fa-check"></i>Tips</a></li>
+<li class="chapter" data-level="" data-path="instructions.html"><a href="instructions.html#actions"><i class="fa fa-check"></i>Actions</a></li>
+<li class="chapter" data-level="" data-path="instructions.html"><a href="instructions.html#exercise"><i class="fa fa-check"></i>Exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exercise-2.html"><a href="exercise-2.html"><i class="fa fa-check"></i>Exercise 2</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="prob.html"><a href="prob.html"><i class="fa fa-check"></i><b>3</b> Understand Problem</a><ul>
+<li class="chapter" data-level="3.1" data-path="kaggle-competion.html"><a href="kaggle-competion.html"><i class="fa fa-check"></i><b>3.1</b> Kaggle Competion</a></li>
+<li class="chapter" data-level="3.2" data-path="titianic-at-kaggel.html"><a href="titianic-at-kaggel.html"><i class="fa fa-check"></i><b>3.2</b> Titianic at Kaggel</a></li>
+<li class="chapter" data-level="3.3" data-path="the-titanic-problem.html"><a href="the-titanic-problem.html"><i class="fa fa-check"></i><b>3.3</b> The Titanic problem</a><ul>
+<li class="chapter" data-level="" data-path="the-titanic-problem.html"><a href="the-titanic-problem.html#the-challenge"><i class="fa fa-check"></i>The challenge</a></li>
+<li class="chapter" data-level="" data-path="the-titanic-problem.html"><a href="the-titanic-problem.html#the-data"><i class="fa fa-check"></i>The data</a></li>
+<li class="chapter" data-level="" data-path="the-titanic-problem.html"><a href="the-titanic-problem.html#submission"><i class="fa fa-check"></i>Submission</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="reflection.html"><a href="reflection.html"><i class="fa fa-check"></i><b>3.4</b> Reflection</a></li>
+<li class="chapter" data-level="" data-path="exercises-3.html"><a href="exercises-3.html"><i class="fa fa-check"></i>Exercises 3</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="understand-data.html"><a href="understand-data.html"><i class="fa fa-check"></i><b>4</b> Understand Data</a><ul>
+<li class="chapter" data-level="4.1" data-path="load-data.html"><a href="load-data.html"><i class="fa fa-check"></i><b>4.1</b> Load data</a></li>
+<li class="chapter" data-level="4.2" data-path="assess-data-quantity.html"><a href="assess-data-quantity.html"><i class="fa fa-check"></i><b>4.2</b> Assess Data Quantity</a></li>
+<li class="chapter" data-level="4.3" data-path="general-data-attributes-assessment.html"><a href="general-data-attributes-assessment.html"><i class="fa fa-check"></i><b>4.3</b> General Data Attributes Assessment</a></li>
+<li class="chapter" data-level="4.4" data-path="actual-attributes-types-examination.html"><a href="actual-attributes-types-examination.html"><i class="fa fa-check"></i><b>4.4</b> Actual Attributes Types Examination</a></li>
+<li class="chapter" data-level="4.5" data-path="actual-data-attributes-value-examination.html"><a href="actual-data-attributes-value-examination.html"><i class="fa fa-check"></i><b>4.5</b> Actual Data Attributes Value Examination</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="actual-data-attributes-value-examination.html"><a href="actual-data-attributes-value-examination.html#passengerid."><i class="fa fa-check"></i><b>4.5.1</b> PassengerID.</a></li>
+<li class="chapter" data-level="4.5.2" data-path="actual-data-attributes-value-examination.html"><a href="actual-data-attributes-value-examination.html#survived"><i class="fa fa-check"></i><b>4.5.2</b> Survived</a></li>
+<li class="chapter" data-level="4.5.3" data-path="actual-data-attributes-value-examination.html"><a href="actual-data-attributes-value-examination.html#pclass"><i class="fa fa-check"></i><b>4.5.3</b> Pclass</a></li>
+<li class="chapter" data-level="4.5.4" data-path="actual-data-attributes-value-examination.html"><a href="actual-data-attributes-value-examination.html#name"><i class="fa fa-check"></i><b>4.5.4</b> Name</a></li>
+<li class="chapter" data-level="4.5.5" data-path="actual-data-attributes-value-examination.html"><a href="actual-data-attributes-value-examination.html#sex"><i class="fa fa-check"></i><b>4.5.5</b> Sex</a></li>
+<li class="chapter" data-level="4.5.6" data-path="actual-data-attributes-value-examination.html"><a href="actual-data-attributes-value-examination.html#age"><i class="fa fa-check"></i><b>4.5.6</b> Age</a></li>
+<li class="chapter" data-level="4.5.7" data-path="actual-data-attributes-value-examination.html"><a href="actual-data-attributes-value-examination.html#sibsp"><i class="fa fa-check"></i><b>4.5.7</b> SibSp</a></li>
+<li class="chapter" data-level="4.5.8" data-path="actual-data-attributes-value-examination.html"><a href="actual-data-attributes-value-examination.html#parch"><i class="fa fa-check"></i><b>4.5.8</b> Parch</a></li>
+<li class="chapter" data-level="4.5.9" data-path="actual-data-attributes-value-examination.html"><a href="actual-data-attributes-value-examination.html#ticket"><i class="fa fa-check"></i><b>4.5.9</b> Ticket</a></li>
+<li class="chapter" data-level="4.5.10" data-path="actual-data-attributes-value-examination.html"><a href="actual-data-attributes-value-examination.html#fare"><i class="fa fa-check"></i><b>4.5.10</b> Fare</a></li>
+<li class="chapter" data-level="4.5.11" data-path="actual-data-attributes-value-examination.html"><a href="actual-data-attributes-value-examination.html#cabin"><i class="fa fa-check"></i><b>4.5.11</b> Cabin</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="data-recods-level-assessment.html"><a href="data-recods-level-assessment.html"><i class="fa fa-check"></i><b>4.6</b> Data recods level assessment</a></li>
+<li class="chapter" data-level="" data-path="summary.html"><a href="summary.html#summary"><i class="fa fa-check"></i>Summary</a></li>
+<li class="chapter" data-level="" data-path="exercises-4.html"><a href="exercises-4.html"><i class="fa fa-check"></i>Exercises 4</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="data-preprocess.html"><a href="data-preprocess.html"><i class="fa fa-check"></i><b>5</b> Data PreProcess</a><ul>
+<li class="chapter" data-level="5.1" data-path="dealt-with-miss-values-and-errors-age.html"><a href="dealt-with-miss-values-and-errors-age.html"><i class="fa fa-check"></i><b>5.1</b> Dealt with Miss values and Errors (Age, )</a></li>
+<li class="chapter" data-level="5.2" data-path="attributes-selection-prediction-power.html"><a href="attributes-selection-prediction-power.html"><i class="fa fa-check"></i><b>5.2</b> Attributes selection (prediction power)</a></li>
+<li class="chapter" data-level="5.3" data-path="attribute-reengineering-title-from-name-treval-famail-relatives-alone-from-parch-and-sibsb.html"><a href="attribute-reengineering-title-from-name-treval-famail-relatives-alone-from-parch-and-sibsb.html"><i class="fa fa-check"></i><b>5.3</b> Attribute reengineering ( title from name, treval famail _ relatives, alone from ParCh and SibSb)</a></li>
+<li class="chapter" data-level="5.4" data-path="assemble-final-datasets-for-modelling.html"><a href="assemble-final-datasets-for-modelling.html"><i class="fa fa-check"></i><b>5.4</b> Assemble final datasets for modelling</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="data-analysis.html"><a href="data-analysis.html"><i class="fa fa-check"></i><b>6</b> Data Analysis</a><ul>
+<li class="chapter" data-level="6.1" data-path="modelsprediction.html"><a href="modelsprediction.html"><i class="fa fa-check"></i><b>6.1</b> models:Prediction</a></li>
+<li class="chapter" data-level="6.2" data-path="evaluation.html"><a href="evaluation.html"><i class="fa fa-check"></i><b>6.2</b> Evaluation</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="result-interpretation.html"><a href="result-interpretation.html"><i class="fa fa-check"></i><b>7</b> Result Interpretation</a></li>
+<li class="chapter" data-level="8" data-path="data-report.html"><a href="data-report.html"><i class="fa fa-check"></i><b>8</b> Data Report</a></li>
+<li class="chapter" data-level="" data-path="reference.html"><a href="reference.html"><i class="fa fa-check"></i>Reference</a><ul>
+<li class="chapter" data-level="8.1" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>8.1</b> R Markdown</a></li>
+<li class="chapter" data-level="8.2" data-path="including-plots.html"><a href="including-plots.html"><i class="fa fa-check"></i><b>8.2</b> Including Plots</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="_blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Do Data Science in 10 Hours</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="actual-data-attributes-value-examination" class="section level2">
+<h2><span class="header-section-number">4.5</span> Actual Data Attributes Value Examination</h2>
+<p>To understand given datasets needs to carefully examine the values of each data attributes to:</p>
+<ul>
+<li>find any errors and missing values</li>
+<li>find value distribution</li>
+<li>find potential relation with the attribute to be predicted (also called dependent variable)</li>
+</ul>
+<p>Finding errors, typos and missing values can set up the goals for data prepsocess.</p>
+<p>Since the examine covers both datesets <code>train</code> and <code>test</code>, it make sense to combine the two datasets into one big dataset, so it can save us to run the same code twice on the different datasets.</p>
+<p>Copy the following code into your script,</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="actual-data-attributes-value-examination.html#cb5-1"></a><span class="co"># Add a &quot;Survived&quot; attribute to the test dataset to allow for combining with train dataset</span></span>
+<span id="cb5-2"><a href="actual-data-attributes-value-examination.html#cb5-2"></a></span>
+<span id="cb5-3"><a href="actual-data-attributes-value-examination.html#cb5-3"></a>test &lt;-<span class="st"> </span><span class="kw">data.frame</span>(test[<span class="dv">1</span>], <span class="dt">Survived =</span> <span class="kw">rep</span>(<span class="st">&quot;NA&quot;</span>, <span class="kw">nrow</span>(test)), test[ ,<span class="dv">2</span><span class="op">:</span><span class="kw">ncol</span>(test)])</span>
+<span id="cb5-4"><a href="actual-data-attributes-value-examination.html#cb5-4"></a></span>
+<span id="cb5-5"><a href="actual-data-attributes-value-examination.html#cb5-5"></a><span class="co"># Combine data sets. Append test.survived to train</span></span>
+<span id="cb5-6"><a href="actual-data-attributes-value-examination.html#cb5-6"></a>data &lt;-<span class="st"> </span><span class="kw">rbind</span>(train, test)</span></code></pre></div>
+<p>Now we have a dataset <code>data</code>, which combines both datasets <code>train</code> and <code>test</code> datasets. We assigned the value of attribute <em>Survived</em> in the original dataset <code>test</code> as “NA”. You can check them in the <strong>WorkSpace pane</strong> by click variable data.</p>
+
+<div class="rmdtry">
+<p>Thinking:</p>
+<ol style="list-style-type: decimal">
+<li>Can we combine <code>train</code> and <code>test</code> without add <em>Survived</em> attribute to the test? Like,</li>
+</ol>
+<p><code>data &lt;- rbind(train, test)</code></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Why add attibute <em>Survived</em> as the second attribute? Can we add it as the first one? Like,</li>
+</ol>
+<p><code>test &lt;- data.frame(Survived = rep("NA", nrow(test)), test[,])</code></p>
+</div>
+
+<p>It is good idea to have bird eye’s view on our combined dataset.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="actual-data-attributes-value-examination.html#cb6-1"></a><span class="co"># check out data with a summary</span></span>
+<span id="cb6-2"><a href="actual-data-attributes-value-examination.html#cb6-2"></a><span class="kw">summary</span>(data)</span></code></pre></div>
+<pre><code>##   PassengerId     Survived             Pclass     
+##  Min.   :   1   Length:1309        Min.   :1.000  
+##  1st Qu.: 328   Class :character   1st Qu.:2.000  
+##  Median : 655   Mode  :character   Median :3.000  
+##  Mean   : 655                      Mean   :2.295  
+##  3rd Qu.: 982                      3rd Qu.:3.000  
+##  Max.   :1309                      Max.   :3.000  
+##                                                   
+##                                Name          Sex           Age       
+##  Connolly, Miss. Kate            :   2   female:466   Min.   : 0.17  
+##  Kelly, Mr. James                :   2   male  :843   1st Qu.:21.00  
+##  Abbing, Mr. Anthony             :   1                Median :28.00  
+##  Abbott, Mr. Rossmore Edward     :   1                Mean   :29.88  
+##  Abbott, Mrs. Stanton (Rosa Hunt):   1                3rd Qu.:39.00  
+##  Abelson, Mr. Samuel             :   1                Max.   :80.00  
+##  (Other)                         :1301                NA&#39;s   :263    
+##      SibSp            Parch            Ticket          Fare        
+##  Min.   :0.0000   Min.   :0.000   CA. 2343:  11   Min.   :  0.000  
+##  1st Qu.:0.0000   1st Qu.:0.000   1601    :   8   1st Qu.:  7.896  
+##  Median :0.0000   Median :0.000   CA 2144 :   8   Median : 14.454  
+##  Mean   :0.4989   Mean   :0.385   3101295 :   7   Mean   : 33.295  
+##  3rd Qu.:1.0000   3rd Qu.:0.000   347077  :   7   3rd Qu.: 31.275  
+##  Max.   :8.0000   Max.   :9.000   347082  :   7   Max.   :512.329  
+##                                   (Other) :1261   NA&#39;s   :1        
+##              Cabin      Embarked
+##                 :1014    :  2   
+##  C23 C25 C27    :   6   C:270   
+##  B57 B59 B63 B66:   5   Q:123   
+##  G6             :   5   S:914   
+##  B96 B98        :   4           
+##  C22 C26        :   4           
+##  (Other)        : 271</code></pre>
+<p>This summary  tell us a lot of information. Most obvious are:</p>
+<ol style="list-style-type: decimal">
+<li><em>PassengerID</em> is useless in terms of predicting survived or not. in addition, it is not much help that provide a statistical summary on it.</li>
+<li><em>Survived</em> and <em>Pclass</em> numbers are useful and interesting.</li>
+<li><em>Name</em> is mostly unique, which comes a surprise that only 2 names are repeated twice.</li>
+<li><em>Gender</em> distribution among passenger is unbalanced that male overweight female.</li>
+<li><em>Age</em> is interesting that minimum age 0.17 is alarming and there is 263 missing values.</li>
+<li><em>SibSp</em> tells us the largest relatives travel together is 8.</li>
+<li><em>ParCh</em> tells us the largest family travel together is 9.</li>
+<li>There are a number of <em>ticket</em> has the same number. The most repeat number is CA. 2343, which has 11 duplicates.</li>
+<li>Ticket <em>Fare</em> shows the minimum is 0, which is interesting that someone take a free ride. The maximum is over 512, which is far too expensive when the mean value is only about 33.</li>
+<li><em>Cabin</em> has a large number of missing values (identified by "").</li>
+<li><em>Embarked</em> only has three values which is not a good sign for prediction. it also has 2 missing value.</li>
+</ol>
+<p>You can see now one function can provide so much information. Quantitative summary is a great tool for a data scientist.</p>
+<p>Now, Let us exam each attribute,</p>
+<div id="passengerid." class="section level3">
+<h3><span class="header-section-number">4.5.1</span> PassengerID.</h3>
+<p><em>PassengerId</em> is an identifier, So only its uniqueness and missing value are considered.</p>
+<p>There are many ways you can use to find out. I simply check its total number and its unique number. If the both equal to the number of records in the dataset, it shows that there is no duplication and no missing values in the attribute.</p>
+<p>So we do,</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="actual-data-attributes-value-examination.html#cb8-1"></a><span class="co"># Exam PassengerID</span></span>
+<span id="cb8-2"><a href="actual-data-attributes-value-examination.html#cb8-2"></a></span>
+<span id="cb8-3"><a href="actual-data-attributes-value-examination.html#cb8-3"></a><span class="kw">length</span>(data<span class="op">$</span>PassengerId)</span></code></pre></div>
+<pre><code>## [1] 1309</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="actual-data-attributes-value-examination.html#cb10-1"></a><span class="kw">length</span>(<span class="kw">unique</span>(data<span class="op">$</span>PassengerId))</span></code></pre></div>
+<pre><code>## [1] 1309</code></pre>
+<p>The results shows the both number 1309, which is equal to the total number of records in the dataset. It proves the <em>PassengerID</em> has not missing value and duplication.</p>
+</div>
+<div id="survived" class="section level3">
+<h3><span class="header-section-number">4.5.2</span> Survived</h3>
+<p><em>Survived</em> is the attribute that its value will be produced by a model for the dataset <code>test</code>. It is called <strong>Consequencer</strong> in modeling contrast with other attributes. which are used to produce a prediction, are called <strong>Predictor</strong>. So, our exam will be conducted only on dataset <code>train</code>. Again we can check the numbers whether they can add up or not. As we already mentioned that it makes sense to change the <em>Servived</em> from type <code>chr</code> into <code>Factor</code>. We do,</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="actual-data-attributes-value-examination.html#cb12-1"></a><span class="co"># Exam Survived</span></span>
+<span id="cb12-2"><a href="actual-data-attributes-value-examination.html#cb12-2"></a>data<span class="op">$</span>Survived &lt;-<span class="st"> </span><span class="kw">as.factor</span>(data<span class="op">$</span>Survived)</span>
+<span id="cb12-3"><a href="actual-data-attributes-value-examination.html#cb12-3"></a><span class="kw">table</span>(data<span class="op">$</span>Survived)</span></code></pre></div>
+<pre><code>## 
+##   0   1  NA 
+## 549 342 418</code></pre>
+<p>The results proved that the <em>Survived</em> value has the correct numbers:</p>
+<ul>
+<li>418 ‘NA’ values are the <em>Survived</em>’s value in the dataset <code>test</code>, and</li>
+<li>the 549 death and 342 survived, together maded up the total number of dataset <code>train</code>, which is 891.</li>
+</ul>
+<p>So we know the value of <em>Survived</em> in the dataset <code>train</code> are correct and has no missing values. It is interesting here to think about the survive rate. How to calculate?</p>
+<p>I will do this,</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="actual-data-attributes-value-examination.html#cb14-1"></a><span class="co"># Calculate the survive rate in train data is 38% and the death rate is 61.61%</span></span>
+<span id="cb14-2"><a href="actual-data-attributes-value-examination.html#cb14-2"></a><span class="kw">prop.table</span>(<span class="kw">table</span>(<span class="kw">as.factor</span>(train<span class="op">$</span>Survived)))</span></code></pre></div>
+<pre><code>## 
+##         0         1 
+## 0.6161616 0.3838384</code></pre>
+<p>So we know the survive rate in the dataset <code>train</code> is about 61%. This is interesting because it reflects the overall survival rate.</p>
+</div>
+<div id="pclass" class="section level3">
+<h3><span class="header-section-number">4.5.3</span> Pclass</h3>
+<p><em>Pclass</em> is the feature which splits the passengers into three division namely class-1, class-2, class-3. As we understood it should be in type of <code>Factor</code> rather than <code>int</code>. We shall change its type first and then to see if there missing value or errors. It is also good to know the survival rate in each class. So. we can compare with the overall survival rate in the dataset <code>train</code>.</p>
+<p>Copy the following code into your script.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="actual-data-attributes-value-examination.html#cb16-1"></a><span class="co"># Examine Pclass value,</span></span>
+<span id="cb16-2"><a href="actual-data-attributes-value-examination.html#cb16-2"></a><span class="co"># Look into Kaggle&#39;s explanation about Pclass: it is a proxy for social class i.e. rich or poor</span></span>
+<span id="cb16-3"><a href="actual-data-attributes-value-examination.html#cb16-3"></a><span class="co"># It should be factor and it does not make sense to stay in int.</span></span>
+<span id="cb16-4"><a href="actual-data-attributes-value-examination.html#cb16-4"></a>data<span class="op">$</span>Pclass &lt;-<span class="st"> </span><span class="kw">as.factor</span>(data<span class="op">$</span>Pclass)</span>
+<span id="cb16-5"><a href="actual-data-attributes-value-examination.html#cb16-5"></a>test<span class="op">$</span>Pclass &lt;-<span class="st"> </span><span class="kw">as.factor</span>(test<span class="op">$</span>Pclass)</span>
+<span id="cb16-6"><a href="actual-data-attributes-value-examination.html#cb16-6"></a>train<span class="op">$</span>Pclass &lt;-<span class="st"> </span><span class="kw">as.factor</span>(train<span class="op">$</span>Pclass)</span>
+<span id="cb16-7"><a href="actual-data-attributes-value-examination.html#cb16-7"></a></span>
+<span id="cb16-8"><a href="actual-data-attributes-value-examination.html#cb16-8"></a><span class="co"># Distribution across classes</span></span>
+<span id="cb16-9"><a href="actual-data-attributes-value-examination.html#cb16-9"></a><span class="kw">table</span>(data<span class="op">$</span>Pclass)</span></code></pre></div>
+<pre><code>## 
+##   1   2   3 
+## 323 277 709</code></pre>
+<p>If you want, you can check the total of the three classes which is 1309. It equals to the total number of records in the <code>data</code> (total number fo passenger). And there is no other numbers than 1,2 and 3. So we can conclude that there is no missing value and no errors in <em>Pcalss</em>.</p>
+<p>It will be interesting to see the survival rate for each class,</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="actual-data-attributes-value-examination.html#cb18-1"></a><span class="co"># Distribution across classes with survive</span></span>
+<span id="cb18-2"><a href="actual-data-attributes-value-examination.html#cb18-2"></a><span class="kw">table</span>(data<span class="op">$</span>Pclass, data<span class="op">$</span>Survived)</span></code></pre></div>
+<pre><code>##    
+##       0   1  NA
+##   1  80 136 107
+##   2  97  87  93
+##   3 372 119 218</code></pre>
+<p>These numbers tell us many things:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>The death distribution</strong>. Among the three classes from class-1 to class-3 is: 80, 97 and 379. It confirms that the passenger in Class-3 has largest number of death (372);</p></li>
+<li><p><strong>The survival distribution</strong>. Among the three classes, class-1 has the highest number of survival (136);</p></li>
+<li><p><strong>The passengers distribution</strong>. Among the three classes, class-3 has the largest passenger numbers (372+119+218) in total, and overtaking other two classes together for both datasets <code>train</code> and <code>test</code> (372+119) &gt; ((80+97) + (136+87)).</p></li>
+<li><p>The last column is the pasenger distribution among the three glasses for dataset <code>test</code>. This is because its <em>Survived</em> value is “NA” (not defined).</p></li>
+</ol>
+<p>We can calculate distributions among the three classes in terms of percentage.</p>
+<ol style="list-style-type: decimal">
+<li>The overall passenger’s distribution among the three classes:</li>
+</ol>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="actual-data-attributes-value-examination.html#cb20-1"></a><span class="co"># Calculate the distribution on Pclass</span></span>
+<span id="cb20-2"><a href="actual-data-attributes-value-examination.html#cb20-2"></a><span class="co"># Overall passenger distribution on classes.</span></span>
+<span id="cb20-3"><a href="actual-data-attributes-value-examination.html#cb20-3"></a><span class="kw">prop.table</span>(<span class="kw">table</span>(<span class="kw">as.factor</span>(data<span class="op">$</span>Pclass)))</span></code></pre></div>
+<pre><code>## 
+##         1         2         3 
+## 0.2467532 0.2116119 0.5416348</code></pre>
+<p>That is 24.67% passenger in Class-1, 21.16% passenger is class-2 and 54.16% of passenger in class-3.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>The passenger’s distribution among the three classes given by dataset <code>train</code>:</li>
+</ol>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="actual-data-attributes-value-examination.html#cb22-1"></a><span class="co"># Train data passenger distribution on classes.</span></span>
+<span id="cb22-2"><a href="actual-data-attributes-value-examination.html#cb22-2"></a><span class="kw">prop.table</span>(<span class="kw">table</span>(<span class="kw">as.factor</span>(train<span class="op">$</span>Pclass)))</span></code></pre></div>
+<pre><code>## 
+##         1         2         3 
+## 0.2424242 0.2065095 0.5510662</code></pre>
+<p>The number tells us the distribution of passengers from dataset <code>train</code> is: class-1, 24.24%; class-2, 20.65% and class-3 has 55.1%.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>The passenger’s distribution among the three classes given by dataset <code>test</code>:</li>
+</ol>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="actual-data-attributes-value-examination.html#cb24-1"></a><span class="co"># Test data passenger distribution on classes.</span></span>
+<span id="cb24-2"><a href="actual-data-attributes-value-examination.html#cb24-2"></a><span class="kw">prop.table</span>(<span class="kw">table</span>(<span class="kw">as.factor</span>(test<span class="op">$</span>Pclass)))</span></code></pre></div>
+<pre><code>## 
+##         1         2         3 
+## 0.2559809 0.2224880 0.5215311</code></pre>
+<p>Lastly, the passenger distribution from dataset <code>test</code> are: 25.6% in class-1, 22.24% in class-2 and 52.15% percent in class-3.</p>
+<p>We can see that the distribution of passengers, in terms of percentage, among the three classes are almost identical both in order and in proportion. That is the most passenger are in class-3, then class-1 and finally class-2.</p>
+<p>Let us look into death and survive distribution among the three classes<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>,</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="actual-data-attributes-value-examination.html#cb26-1"></a><span class="co"># Calculate death distribution across classes with Train data</span></span>
+<span id="cb26-2"><a href="actual-data-attributes-value-examination.html#cb26-2"></a>SurviveOverClass &lt;-<span class="st"> </span><span class="kw">table</span>(train<span class="op">$</span>Pclass, train<span class="op">$</span>Survived)</span>
+<span id="cb26-3"><a href="actual-data-attributes-value-examination.html#cb26-3"></a><span class="co"># Convert SurviveOverClass into data frame</span></span>
+<span id="cb26-4"><a href="actual-data-attributes-value-examination.html#cb26-4"></a>SoC.data.fram &lt;-<span class="st"> </span><span class="kw">data.frame</span>(SurviveOverClass) </span>
+<span id="cb26-5"><a href="actual-data-attributes-value-examination.html#cb26-5"></a><span class="co"># Retrieve death distribution in classes</span></span>
+<span id="cb26-6"><a href="actual-data-attributes-value-examination.html#cb26-6"></a>Death.distribution.on.class &lt;-<span class="st"> </span>SoC.data.fram<span class="op">$</span>Freq[SoC.data.fram<span class="op">$</span>Var2<span class="op">==</span><span class="dv">0</span>]</span>
+<span id="cb26-7"><a href="actual-data-attributes-value-examination.html#cb26-7"></a><span class="kw">prop.table</span>(Death.distribution.on.class)</span></code></pre></div>
+<pre><code>## [1] 0.1457195 0.1766849 0.6775956</code></pre>
+<p>These numbers tell us the distribution of death among the three classes are: 14.57% death from class-1, 17.66% from class-2 and 67.75% death from class-3.</p>
+<p>Similarly, we can calculate survive distribution among the three classes,</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="actual-data-attributes-value-examination.html#cb28-1"></a><span class="co"># calculate survive distribution among the three classes</span></span>
+<span id="cb28-2"><a href="actual-data-attributes-value-examination.html#cb28-2"></a>Survive.distribution.on.class &lt;-<span class="st"> </span>SoC.data.fram<span class="op">$</span>Freq[SoC.data.fram<span class="op">$</span>Var2<span class="op">==</span><span class="dv">1</span>]</span>
+<span id="cb28-3"><a href="actual-data-attributes-value-examination.html#cb28-3"></a><span class="kw">prop.table</span>(Survive.distribution.on.class)</span></code></pre></div>
+<pre><code>## [1] 0.3976608 0.2543860 0.3479532</code></pre>
+<p>The results tell us that 39.76% of survived passenger are from class-1, and 25.43% from class-2, and 34.79% from class-3.</p>
+<p>Let us thinking about this numbers. Class-3 has 55.1% of passenger distribution but has 34.79% passenger survival distribution. Clearly, the survive rate in class-3 is lower than other two classes. It is equivalent to say, <strong>the survival chances of a passenger who is in class-1 are higher than who is a class-2 and class-3</strong>.</p>
+
+<div class="rmdaction">
+<p>Do it yourself:</p>
+Calculate the Survival rate among the three classes. What conclusion you have by compare them?
+</div>
+
+<p>Numbers are good to provide summary and test some assumptions. Analyzing given data by means of statistical summary and other numbering methods is called <strong>Descriptive analysis</strong>. See section <a href="process.html#analyse"><strong>??</strong></a> .</p>
+<p>Perhaps, it is a good time to introduce <strong>Exploratory analysis</strong>, on the contrast with the Descriptive analysis, it uses graphical tools to explore the inside of given datasets.</p>
+<p>To do so, we need to import some useful graphical tools provided by R community. We can then use them to plot <em>Survived</em> as an factor on <em>Pclass</em> numbers.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="actual-data-attributes-value-examination.html#cb30-1"></a><span class="co"># Load up ggplot2 package to use for visualizations</span></span>
+<span id="cb30-2"><a href="actual-data-attributes-value-examination.html#cb30-2"></a><span class="kw">library</span>(ggplot2)</span></code></pre></div>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.6.3</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="actual-data-attributes-value-examination.html#cb32-1"></a><span class="kw">ggplot</span>(train, <span class="kw">aes</span>(<span class="dt">x =</span> Pclass, <span class="dt">fill =</span> <span class="kw">factor</span>(Survived))) <span class="op">+</span></span>
+<span id="cb32-2"><a href="actual-data-attributes-value-examination.html#cb32-2"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">width =</span> <span class="fl">0.3</span>) <span class="op">+</span></span>
+<span id="cb32-3"><a href="actual-data-attributes-value-examination.html#cb32-3"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Pclass&quot;</span>) <span class="op">+</span></span>
+<span id="cb32-4"><a href="actual-data-attributes-value-examination.html#cb32-4"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Total Count&quot;</span>) <span class="op">+</span></span>
+<span id="cb32-5"><a href="actual-data-attributes-value-examination.html#cb32-5"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">fill =</span> <span class="st">&quot;Survived&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:Survivalrate"></span>
+<img src="Do-Data-Science-in-10-Hours_files/figure-html/Survivalrate-1.svg" alt="Total count and survive rate of passenger on Pcalss." width="672" />
+<p class="caption">
+Figure 4.6: Total count and survive rate of passenger on Pcalss.
+</p>
+</div>
+<p>Graph is better, isn’t it? It is very intuative.</p>
+<p>Let’s briefly interpret this graph. The graph shown <a href="actual-data-attributes-value-examination.html#fig:Survivalrate">4.6</a> tells us that the survive rate in Class-3 is the worst, and followed by class-2 and lastly, class-1. More people perished in the class-3 than any other two classes. It provides an important point that the chance of survive is associated with the <strong>social glass</strong>, if we can prove the Class-3 ticket is cheaper.</p>
+<p>To sum up the analysis with Pclass, We have used both <strong>Descriptive analysis</strong> and <strong>Exploratory analysis</strong>. The results suggested that <strong>the <em>Pclass</em> has a strong relation with death rate</strong>. That is passengers in Class-3 have a higher chance of death. The correlation with social class (richer or poor) is waiting to be proved if the class-3 ticket is cheaper than others.</p>
+</div>
+<div id="name" class="section level3">
+<h3><span class="header-section-number">4.5.4</span> Name</h3>
+<p><em>Name</em> attribute by definition shows peoples’ name. It should not have any impact on passengers’ live and death. Never heard of someone was survived because one’s name!
+However we still need to asess its quality. Fir</p>
+<p>Firstly, you may notice that the type of <em>Name</em> is a <code>Factor</code>, which is contradicted with the conventional understanding that name is a string or a list characters. Type <code>chr</code> would be more appropriate. Change its type to <code>chr</code> will help us to apply character functions to it and get it contents easily. Factor shows the uniqueness. it could help us to assess if there is missing value or duplicated values.</p>
+<p>Notice that attribute <em>Name</em> only has 1307 levels (can be observed from the <code>data</code> structure on the <strong>WorkSpace pane</strong>). In addition, the <code>data</code> summary, see Figure <a href="#fig:summaryofdata"><strong>??</strong></a>, not only confirmed this but also identified the two shorts because of the value “Connolly, Miss. Kate” and “Kelly, Mr. James” have been repeated twice each.</p>
+<p>Let us explore <em>Name</em> values in details.
+Firstly, let us convert <em>Name</em> type into <code>chr</code>. Then we can check duplicated names using <code>which</code> function in R to get the duplicate names and store them into a vector <code>dup.names</code>. And echo them out.</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="actual-data-attributes-value-examination.html#cb33-1"></a><span class="co"># Convert Name type</span></span>
+<span id="cb33-2"><a href="actual-data-attributes-value-examination.html#cb33-2"></a>data<span class="op">$</span>Name &lt;-<span class="st"> </span><span class="kw">as.character</span>(data<span class="op">$</span>Name)</span>
+<span id="cb33-3"><a href="actual-data-attributes-value-examination.html#cb33-3"></a><span class="co"># Find the two duplicate names</span></span>
+<span id="cb33-4"><a href="actual-data-attributes-value-examination.html#cb33-4"></a><span class="co"># First used which function to get the duplicate names and store them as a vector dup.names </span></span>
+<span id="cb33-5"><a href="actual-data-attributes-value-examination.html#cb33-5"></a><span class="co"># check it up ?which.</span></span>
+<span id="cb33-6"><a href="actual-data-attributes-value-examination.html#cb33-6"></a>dup.names &lt;-<span class="st"> </span>data[<span class="kw">which</span>(<span class="kw">duplicated</span>(data<span class="op">$</span>Name)), <span class="st">&quot;Name&quot;</span>]</span>
+<span id="cb33-7"><a href="actual-data-attributes-value-examination.html#cb33-7"></a></span>
+<span id="cb33-8"><a href="actual-data-attributes-value-examination.html#cb33-8"></a><span class="co"># Echo out </span></span>
+<span id="cb33-9"><a href="actual-data-attributes-value-examination.html#cb33-9"></a>dup.names</span></code></pre></div>
+<pre><code>## [1] &quot;Kelly, Mr. James&quot;     &quot;Connolly, Miss. Kate&quot;</code></pre>
+<p>Our code confirmed that the two duplicated names are indeed "“Kelly, Mr. James” and “Connolly, Miss. Kate”. It comes no surprise that the both names are pretty common in UK and USA.</p>
+<p>One discovery though is that the names appeared has a title in it! <strong>Mr.</strong> is used in Kelly James and <strong>Miss.</strong> is used in Connolly Kate. This could be interesting. We can leave this for <strong>Preprocess</strong> to explore more. For the quality assessment it is mission accomplished.</p>
+</div>
+<div id="sex" class="section level3">
+<h3><span class="header-section-number">4.5.5</span> Sex</h3>
+<p><em>Sex</em> attribute value assessment is simple. Its type <code>Factor</code> helps a lot. Since it only has two values “male” and “female”, we could easily check if there are missing values and any errors.</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="actual-data-attributes-value-examination.html#cb35-1"></a><span class="co"># Use summary to check numbers and distribution</span></span>
+<span id="cb35-2"><a href="actual-data-attributes-value-examination.html#cb35-2"></a><span class="kw">summary</span>(data<span class="op">$</span>Sex)</span></code></pre></div>
+<pre><code>## female   male 
+##    466    843</code></pre>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="actual-data-attributes-value-examination.html#cb37-1"></a><span class="co"># If you prefer you can use data.table functions</span></span></code></pre></div>
+<p>It is obvious that there is no error and missing values. The result confirms this: male 843 and female 466, together we have 1309 passengers, which is the total numbers of the passenger.</p>
+<p>It is also simple to explore the relationship between gender and the survival rate. We had an assumption that the male passengers have a high death rate. We have plot tools in our disposal, let’s make use of it. Since only dataset <code>train</code> has the values on <em>Survived</em>, it makes sense that we only plot relation between gender and survival on dataset <code>train</code>.</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="actual-data-attributes-value-examination.html#cb38-1"></a><span class="co"># plot Survived over Sex on dataset train</span></span>
+<span id="cb38-2"><a href="actual-data-attributes-value-examination.html#cb38-2"></a><span class="kw">ggplot</span>(data[<span class="dv">1</span><span class="op">:</span><span class="dv">891</span>,], <span class="kw">aes</span>(<span class="dt">x =</span> Sex, <span class="dt">fill =</span> Survived)) <span class="op">+</span></span>
+<span id="cb38-3"><a href="actual-data-attributes-value-examination.html#cb38-3"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">width =</span> <span class="fl">0.3</span>) <span class="op">+</span></span>
+<span id="cb38-4"><a href="actual-data-attributes-value-examination.html#cb38-4"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Sex&quot;</span>) <span class="op">+</span></span>
+<span id="cb38-5"><a href="actual-data-attributes-value-examination.html#cb38-5"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Total Count&quot;</span>) <span class="op">+</span></span>
+<span id="cb38-6"><a href="actual-data-attributes-value-examination.html#cb38-6"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">fill =</span> <span class="st">&quot;Survived&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:Survivalrateonsex"></span>
+<img src="Do-Data-Science-in-10-Hours_files/figure-html/Survivalrateonsex-1.svg" alt="Total count and survive rate of passenger on sex." width="672" />
+<p class="caption">
+Figure 4.7: Total count and survive rate of passenger on sex.
+</p>
+</div>
+<p>The graph shows that the male death rate is much higher than female passengers.</p>
+
+<div class="rmdthinking">
+<p>Thinking:</p>
+We have used <code>data[1:891,]</code> in our <code>ggplot</code> code. Why we do not use dataset <code>train</code> instead? What are the differnce if there is any?
+</div>
+
+</div>
+<div id="age" class="section level3">
+<h3><span class="header-section-number">4.5.6</span> Age</h3>
+<p>To examine values of attribute <em>Age</em>, we do this,</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="actual-data-attributes-value-examination.html#cb39-1"></a><span class="co"># Examine Age over data, train and test.</span></span>
+<span id="cb39-2"><a href="actual-data-attributes-value-examination.html#cb39-2"></a><span class="kw">summary</span>(data<span class="op">$</span>Age)</span></code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
+##    0.17   21.00   28.00   29.88   39.00   80.00     263</code></pre>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="actual-data-attributes-value-examination.html#cb41-1"></a><span class="kw">summary</span>(train<span class="op">$</span>Age)</span></code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
+##    0.42   20.12   28.00   29.70   38.00   80.00     177</code></pre>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="actual-data-attributes-value-examination.html#cb43-1"></a><span class="kw">summary</span>(test<span class="op">$</span>Age)</span></code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
+##    0.17   21.00   27.00   30.27   39.00   76.00      86</code></pre>
+<p>These summary tell us that the minimum, median, mean, maximum and missing values (as NA). They are useful. but they failed telling us on the value distribution.</p>
+<div class="figure" style="text-align: center"><span id="fig:ats"></span>
+<img src="img/ageresult.png" alt="*Age* summary as categorical data." width="80%" />
+<p class="caption">
+Figure 4.8: <em>Age</em> summary as categorical data.
+</p>
+</div>
+<p>From Figure <a href="actual-data-attributes-value-examination.html#fig:ats">4.8</a>, we can see a few problems:</p>
+<ol style="list-style-type: decimal">
+<li><p>Age values have decimal point which is a sort of surprise and not sure if it is a mistake.</p></li>
+<li><p>There are large number of missing values: 177 missing value in dataset <code>train</code> and 86 missing value in dataset <code>test</code>, in total of 263, which count as 263/1309 = 20%. large number of missing values sets up a task for <strong>data preprocess</strong> to deal with. In the same time, it make you think whether it is a valid predictor or not.</p></li>
+</ol>
+<p>We can assess its impact on survive rate. So we need to look into dataset <code>train</code>.</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="actual-data-attributes-value-examination.html#cb45-1"></a><span class="co"># plot distribution of age group</span></span>
+<span id="cb45-2"><a href="actual-data-attributes-value-examination.html#cb45-2"></a><span class="kw">ggplot</span>(data, <span class="kw">aes</span>(<span class="dt">x =</span> Age)) <span class="op">+</span></span>
+<span id="cb45-3"><a href="actual-data-attributes-value-examination.html#cb45-3"></a><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">10</span>, <span class="dt">fill=</span><span class="st">&quot;steelblue&quot;</span>) <span class="op">+</span></span>
+<span id="cb45-4"><a href="actual-data-attributes-value-examination.html#cb45-4"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Age&quot;</span>) <span class="op">+</span></span>
+<span id="cb45-5"><a href="actual-data-attributes-value-examination.html#cb45-5"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Total Count&quot;</span>)</span></code></pre></div>
+<pre><code>## Warning: Removed 263 rows containing non-finite values (stat_bin).</code></pre>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="actual-data-attributes-value-examination.html#cb47-1"></a><span class="co"># plot Survived on age group using train dataset</span></span>
+<span id="cb47-2"><a href="actual-data-attributes-value-examination.html#cb47-2"></a><span class="kw">ggplot</span>(data[<span class="dv">1</span><span class="op">:</span><span class="dv">891</span>,], <span class="kw">aes</span>(<span class="dt">x =</span> Age, <span class="dt">fill =</span> Survived)) <span class="op">+</span></span>
+<span id="cb47-3"><a href="actual-data-attributes-value-examination.html#cb47-3"></a><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">10</span>) <span class="op">+</span></span>
+<span id="cb47-4"><a href="actual-data-attributes-value-examination.html#cb47-4"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Age&quot;</span>) <span class="op">+</span></span>
+<span id="cb47-5"><a href="actual-data-attributes-value-examination.html#cb47-5"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Total Count&quot;</span>)</span></code></pre></div>
+<pre><code>## Warning: Removed 177 rows containing non-finite values (stat_bin).</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:age"></span>
+<img src="Do-Data-Science-in-10-Hours_files/figure-html/age-1.svg" alt="*Age* ditribution and its Survive rate of passenger" width="50%" /><img src="Do-Data-Science-in-10-Hours_files/figure-html/age-2.svg" alt="*Age* ditribution and its Survive rate of passenger" width="50%" />
+<p class="caption">
+Figure 4.9: <em>Age</em> ditribution and its Survive rate of passenger
+</p>
+</div>
+<p>The graph shows the relationship between <em>Age</em> and survival rate. It becomes apparent that age group between 15 and 25 has the worst survival rate. It is also interesting to know that there are some age has values less than 0!</p>
+<p>With this, we could conclude that.</p>
+<p>The attribute <em>Age</em> has a serious quality problem: some age values are negative and large number 177 values are missing. If it is to be used as a predictor in our model for prediction, it needs a lot of work in the stage of preprocess.</p>
+</div>
+<div id="sibsp" class="section level3">
+<h3><span class="header-section-number">4.5.7</span> SibSp</h3>
+<p>Attribute <em>SibSp</em> represents passenger’s siblings and sprouts who travels with the passenger. We will a have pretty good idea about its values. This will help us to spot any errors and missing values.</p>
+<p>We do this,</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="actual-data-attributes-value-examination.html#cb49-1"></a><span class="co">### Exam SibSp, Its original type is int</span></span>
+<span id="cb49-2"><a href="actual-data-attributes-value-examination.html#cb49-2"></a><span class="kw">summary</span>((data<span class="op">$</span>SibSp))</span></code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##  0.0000  0.0000  0.0000  0.4989  1.0000  8.0000</code></pre>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="actual-data-attributes-value-examination.html#cb51-1"></a><span class="co"># How many possible unique values?</span></span>
+<span id="cb51-2"><a href="actual-data-attributes-value-examination.html#cb51-2"></a><span class="kw">length</span>(<span class="kw">unique</span>(data<span class="op">$</span>SibSp))</span></code></pre></div>
+<pre><code>## [1] 7</code></pre>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="actual-data-attributes-value-examination.html#cb53-1"></a><span class="co">#is there an y missing values? check the total number</span></span>
+<span id="cb53-2"><a href="actual-data-attributes-value-examination.html#cb53-2"></a><span class="kw">length</span>(data<span class="op">$</span>SibSp)</span></code></pre></div>
+<pre><code>## [1] 1309</code></pre>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="actual-data-attributes-value-examination.html#cb55-1"></a><span class="co"># Treat it as a factor, so we know the value distribution</span></span>
+<span id="cb55-2"><a href="actual-data-attributes-value-examination.html#cb55-2"></a>data<span class="op">$</span>SibSp &lt;-<span class="st"> </span><span class="kw">as.factor</span>(data<span class="op">$</span>SibSp)</span>
+<span id="cb55-3"><a href="actual-data-attributes-value-examination.html#cb55-3"></a><span class="kw">summary</span>(data<span class="op">$</span>SibSp)</span></code></pre></div>
+<pre><code>##   0   1   2   3   4   5   8 
+## 891 319  42  20  22   6   9</code></pre>
+<p>The results have provided us with good evidence for access its values. Firstly, we know the minimum value is 0, and there are 891 records have 0 values. It means that there are 891 passenger who travel without siblings and sprouts; secondly, apart from the value 0, the 3 quarters of the passenger who has 1 company; and lastly the maximum number of the company a passenger had is 8. There are 9 of them. There are totally 7 kinds of company in terms of the numbers of company a passenger can have.</p>
+<p>It has not error or missing value since the total number are correct.</p>
+<p>We can assess its prediction power by looking into the relationship between <em>SibSp</em> and <em>Suvivied</em>,</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="actual-data-attributes-value-examination.html#cb57-1"></a><span class="co"># plot entire SibSp distribution among the 7 values</span></span>
+<span id="cb57-2"><a href="actual-data-attributes-value-examination.html#cb57-2"></a><span class="kw">ggplot</span>(data, <span class="kw">aes</span>(<span class="dt">x =</span> SibSp)) <span class="op">+</span></span>
+<span id="cb57-3"><a href="actual-data-attributes-value-examination.html#cb57-3"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">width =</span> <span class="fl">0.5</span>) <span class="op">+</span></span>
+<span id="cb57-4"><a href="actual-data-attributes-value-examination.html#cb57-4"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;SibSp&quot;</span>) <span class="op">+</span></span>
+<span id="cb57-5"><a href="actual-data-attributes-value-examination.html#cb57-5"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Total Count&quot;</span>)<span class="op">+</span></span>
+<span id="cb57-6"><a href="actual-data-attributes-value-examination.html#cb57-6"></a><span class="st">  </span><span class="kw">coord_cartesian</span>()</span>
+<span id="cb57-7"><a href="actual-data-attributes-value-examination.html#cb57-7"></a></span>
+<span id="cb57-8"><a href="actual-data-attributes-value-examination.html#cb57-8"></a><span class="co"># Plot on the survive on SibSp</span></span>
+<span id="cb57-9"><a href="actual-data-attributes-value-examination.html#cb57-9"></a><span class="kw">ggplot</span>(data[<span class="dv">1</span><span class="op">:</span><span class="dv">891</span>,], <span class="kw">aes</span>(<span class="dt">x =</span> SibSp, <span class="dt">fill =</span> Survived)) <span class="op">+</span></span>
+<span id="cb57-10"><a href="actual-data-attributes-value-examination.html#cb57-10"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">width =</span> <span class="fl">0.5</span>) <span class="op">+</span></span>
+<span id="cb57-11"><a href="actual-data-attributes-value-examination.html#cb57-11"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;SibSp&quot;</span>) <span class="op">+</span></span>
+<span id="cb57-12"><a href="actual-data-attributes-value-examination.html#cb57-12"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Total Count&quot;</span>)  <span class="op">+</span></span>
+<span id="cb57-13"><a href="actual-data-attributes-value-examination.html#cb57-13"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">fill =</span> <span class="st">&quot;Survived&quot;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:SibSp"></span>
+<img src="Do-Data-Science-in-10-Hours_files/figure-html/SibSp-1.svg" alt="Plot *SibSp* distribution among the 7 values and its survive rate." width="50%" /><img src="Do-Data-Science-in-10-Hours_files/figure-html/SibSp-2.svg" alt="Plot *SibSp* distribution among the 7 values and its survive rate." width="50%" />
+<p class="caption">
+Figure 4.10: Plot <em>SibSp</em> distribution among the 7 values and its survive rate.
+</p>
+</div>
+<p>We run two plots: the first one is the value distribution on entire dataset to have an impression on its distribution shape; and the second one is checking the survival rate over its distribution groups by dataset <code>train</code>. It seems that passenger who have two companies tend to have a better survival rate. This could be an interesting pattern to explore.</p>
+
+<div class="rmdaction">
+<p>Do it yourself:</p>
+Calculate the Survival rate among the 7 possibilities in terms of have siblings or sprouds treval with them. What conclusion you have by compare them?
+</div>
+
+<p>We can conclude that the value of <code>SibSp</code> have a pretty good quality and there is no apparent error and missing values. Its predication power needs further investigation but it is informative.</p>
+</div>
+<div id="parch" class="section level3">
+<h3><span class="header-section-number">4.5.8</span> Parch</h3>
+<p>Attribute <code>Parch</code>, similar with <code>SibSp</code>, is representing the travel company or groups. <code>Parch</code> specifically represents parents or children. I don’t know why Kaggle separate them but it seems reasonable to think they together represent one thing that is “travel with family”.</p>
+<p>To access its value, we will do the same as we did on <code>SibSp</code>.</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="actual-data-attributes-value-examination.html#cb58-1"></a><span class="co">### Exam Parch, Its original type is int</span></span>
+<span id="cb58-2"><a href="actual-data-attributes-value-examination.html#cb58-2"></a><span class="kw">summary</span>((data<span class="op">$</span>Parch))</span></code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   0.000   0.000   0.000   0.385   0.000   9.000</code></pre>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="actual-data-attributes-value-examination.html#cb60-1"></a><span class="co"># How many possible unique values?</span></span>
+<span id="cb60-2"><a href="actual-data-attributes-value-examination.html#cb60-2"></a><span class="kw">length</span>(<span class="kw">unique</span>(data<span class="op">$</span>Parch))</span></code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="actual-data-attributes-value-examination.html#cb62-1"></a><span class="co">#is there an y missing values? check the total number</span></span>
+<span id="cb62-2"><a href="actual-data-attributes-value-examination.html#cb62-2"></a><span class="kw">length</span>(data<span class="op">$</span>Parch)</span></code></pre></div>
+<pre><code>## [1] 1309</code></pre>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="actual-data-attributes-value-examination.html#cb64-1"></a><span class="co"># Treat it as a factor, so we know the value distribution</span></span>
+<span id="cb64-2"><a href="actual-data-attributes-value-examination.html#cb64-2"></a>data<span class="op">$</span>Parch &lt;-<span class="st"> </span><span class="kw">as.factor</span>(data<span class="op">$</span>Parch)</span>
+<span id="cb64-3"><a href="actual-data-attributes-value-examination.html#cb64-3"></a><span class="kw">summary</span>(data<span class="op">$</span>Parch)</span></code></pre></div>
+<pre><code>##    0    1    2    3    4    5    6    9 
+## 1002  170  113    8    6    6    2    2</code></pre>
+<p>The discovery is similar again with <code>SibSp</code>, that is:
+1. The minimum value is 0, and there are 1002 records have 0 values. It means that there are 1002 passenger who travel without without parents or children (we still cannot see the passenger travel alone, he or she could travel with a sibling or a sprout, However, this rise an idea to look into passenger who travel alone, which means no sibling, sprout, parents and children.);
+2. The maximum number is 9. There are 2 of them.
+3. Apart from the value 0, the largest company number is 1. There are 170.
+4. There are totally 8 possibilities in terms of the numbers of company a passenger can have.
+5. It has not error or missing value since the total number are correct.</p>
+<p>We can assess its prediction power too by looking into the relationship between <em>Parch</em> and <em>Survived</em>,</p>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="actual-data-attributes-value-examination.html#cb66-1"></a><span class="co"># plot entire Parch distribution among the 7 values</span></span>
+<span id="cb66-2"><a href="actual-data-attributes-value-examination.html#cb66-2"></a><span class="kw">ggplot</span>(data, <span class="kw">aes</span>(<span class="dt">x =</span> Parch)) <span class="op">+</span></span>
+<span id="cb66-3"><a href="actual-data-attributes-value-examination.html#cb66-3"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">width =</span> <span class="fl">0.5</span>) <span class="op">+</span></span>
+<span id="cb66-4"><a href="actual-data-attributes-value-examination.html#cb66-4"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Parch&quot;</span>) <span class="op">+</span></span>
+<span id="cb66-5"><a href="actual-data-attributes-value-examination.html#cb66-5"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Total Count&quot;</span>)<span class="op">+</span></span>
+<span id="cb66-6"><a href="actual-data-attributes-value-examination.html#cb66-6"></a><span class="st">  </span><span class="kw">coord_cartesian</span>()</span>
+<span id="cb66-7"><a href="actual-data-attributes-value-examination.html#cb66-7"></a></span>
+<span id="cb66-8"><a href="actual-data-attributes-value-examination.html#cb66-8"></a><span class="co"># Plot on the survive on Parch</span></span>
+<span id="cb66-9"><a href="actual-data-attributes-value-examination.html#cb66-9"></a><span class="kw">ggplot</span>(data[<span class="dv">1</span><span class="op">:</span><span class="dv">891</span>,], <span class="kw">aes</span>(<span class="dt">x =</span> Parch, <span class="dt">fill =</span> Survived)) <span class="op">+</span></span>
+<span id="cb66-10"><a href="actual-data-attributes-value-examination.html#cb66-10"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">width =</span> <span class="fl">0.5</span>) <span class="op">+</span></span>
+<span id="cb66-11"><a href="actual-data-attributes-value-examination.html#cb66-11"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Parch&quot;</span>) <span class="op">+</span></span>
+<span id="cb66-12"><a href="actual-data-attributes-value-examination.html#cb66-12"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Total Count&quot;</span>)  <span class="op">+</span></span>
+<span id="cb66-13"><a href="actual-data-attributes-value-examination.html#cb66-13"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">fill =</span> <span class="st">&quot;Survived&quot;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:Parch"></span>
+<img src="Do-Data-Science-in-10-Hours_files/figure-html/Parch-1.svg" alt="Plot *Parch* distribution among the 8 values and its survive rate." width="50%" /><img src="Do-Data-Science-in-10-Hours_files/figure-html/Parch-2.svg" alt="Plot *Parch* distribution among the 8 values and its survive rate." width="50%" />
+<p class="caption">
+Figure 4.11: Plot <em>Parch</em> distribution among the 8 values and its survive rate.
+</p>
+</div>
+<p>The plot shows us that it is definitely have impact on survival. But it i snot clear the prediction power in comparison with <code>SibSp</code>. I am not sure there are difference between “travel with parents or children” and “travel with siblings and sprout”. In addition, value 0 in each attributes does not excludes other attributes. Travel without parents or children does not mean travel without siblings or sprout. If we try to see the impact on survived in terms travel alone or with a company, we need to re-engineer these attributes. It is a good point anyway and give another task for <strong>data preprocess </strong> to do.</p>
+</div>
+<div id="ticket" class="section level3">
+<h3><span class="header-section-number">4.5.9</span> Ticket</h3>
+<p>Intuitively, as mentioned before, ticket number like passenger names, should not be considered as bounded with the survival of a passenger. Unless the ticket number has other hidden information such as class or location on the boat. Bearing this in mind, let us assess its value.</p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="actual-data-attributes-value-examination.html#cb67-1"></a><span class="kw">head</span>(<span class="kw">summary</span>(data<span class="op">$</span>Ticket),<span class="dv">50</span>)</span></code></pre></div>
+<pre><code>##      CA. 2343          1601       CA 2144       3101295        347077 
+##            11             8             8             7             7 
+##        347082      PC 17608  S.O.C. 14879        113781         19950 
+##             7             7             7             6             6 
+##        347088        382652        113503         16966        220845 
+##             6             6             5             5             5 
+##        349909          4133      PC 17757    W./C. 6608        113760 
+##             5             5             5             5             4 
+##         12749         17421        230136         24160          2666 
+##             4             4             4             4             4 
+##         36928     C.A. 2315    C.A. 33112    C.A. 34651          LINE 
+##             4             4             4             4             4 
+##      PC 17483      PC 17755      PC 17760 SC/Paris 2123    W./C. 6607 
+##             4             4             4             4             4 
+##        110152        110413         11767         13502         19877 
+##             3             3             3             3             3 
+##         19928        230080        239853        248727        248738 
+##             3             3             3             3             3 
+##         26360          2650          2653          2661          2662 
+##             3             3             3             3             3</code></pre>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="actual-data-attributes-value-examination.html#cb69-1"></a><span class="co"># Take a look at the ticket value</span></span>
+<span id="cb69-2"><a href="actual-data-attributes-value-examination.html#cb69-2"></a><span class="kw">str</span>(data<span class="op">$</span>Ticket)</span></code></pre></div>
+<pre><code>##  Factor w/ 929 levels &quot;110152&quot;,&quot;110413&quot;,..: 524 597 670 50 473 276 86 396 345 133 ...</code></pre>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="actual-data-attributes-value-examination.html#cb71-1"></a><span class="kw">which</span>(<span class="kw">is.na</span>(data<span class="op">$</span>Ticket))</span></code></pre></div>
+<pre><code>## integer(0)</code></pre>
+<p>The value of <code>Ticket</code> appears has no missing value and there are 929 different numbers and some with letters and some with special characters like “.” and “/”. There is no immediately apparent structure in the data.
+Let us plot them and also see if there is any pattern with survival.</p>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="actual-data-attributes-value-examination.html#cb73-1"></a><span class="co">#plot it value </span></span>
+<span id="cb73-2"><a href="actual-data-attributes-value-examination.html#cb73-2"></a><span class="kw">ggplot</span>(data[<span class="dv">1</span><span class="op">:</span><span class="dv">891</span>,], <span class="kw">aes</span>(<span class="dt">x =</span> Ticket)) <span class="op">+</span></span>
+<span id="cb73-3"><a href="actual-data-attributes-value-examination.html#cb73-3"></a><span class="st">  </span><span class="kw">geom_bar</span>() <span class="op">+</span></span>
+<span id="cb73-4"><a href="actual-data-attributes-value-examination.html#cb73-4"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Ticket&quot;</span>) <span class="op">+</span></span>
+<span id="cb73-5"><a href="actual-data-attributes-value-examination.html#cb73-5"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Total Count&quot;</span>)</span>
+<span id="cb73-6"><a href="actual-data-attributes-value-examination.html#cb73-6"></a><span class="co"># Plot on the survive on Ticket</span></span>
+<span id="cb73-7"><a href="actual-data-attributes-value-examination.html#cb73-7"></a><span class="kw">ggplot</span>(data[<span class="dv">1</span><span class="op">:</span><span class="dv">891</span>,], <span class="kw">aes</span>(<span class="dt">x =</span> Ticket, <span class="dt">fill =</span> Survived)) <span class="op">+</span></span>
+<span id="cb73-8"><a href="actual-data-attributes-value-examination.html#cb73-8"></a><span class="st">  </span><span class="kw">geom_bar</span>() <span class="op">+</span></span>
+<span id="cb73-9"><a href="actual-data-attributes-value-examination.html#cb73-9"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Ticket Number&quot;</span>) <span class="op">+</span></span>
+<span id="cb73-10"><a href="actual-data-attributes-value-examination.html#cb73-10"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Total Count&quot;</span>)  <span class="op">+</span></span>
+<span id="cb73-11"><a href="actual-data-attributes-value-examination.html#cb73-11"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">fill =</span> <span class="st">&quot;Survived&quot;</span>)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:tecket"></span>
+<img src="Do-Data-Science-in-10-Hours_files/figure-html/tecket-1.svg" alt="Plot of *Ticket* distribution and survival rate." width="50%" /><img src="Do-Data-Science-in-10-Hours_files/figure-html/tecket-2.svg" alt="Plot of *Ticket* distribution and survival rate." width="50%" />
+<p class="caption">
+Figure 4.12: Plot of <em>Ticket</em> distribution and survival rate.
+</p>
+</div>
+<p>The same tickets number has such a small number. It does not have any statistical meaning. It is poosible to reengineer <code>ticket</code> number into groups like “number only” vs “with letter” or “with special characters”, or simply group them with th elength of the ticket or with the initials, etc. There is a lot of thing you can do to see if there is any patterns connected with the survival.</p>
+<p>Over all, <code>Ticket</code> has a good quality and has no missing value and errors (we dont count repeated ticket number is an error). However, there is no obvious relations with the survive rate.</p>
+</div>
+<div id="fare" class="section level3">
+<h3><span class="header-section-number">4.5.10</span> Fare</h3>
+<p>The value of <code>Fare</code> are expected associated with “passenger’s wealth”. You would naturally associate its value with cabin condition and perhaps location of he cabin. Let us assess its value quality.</p>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="actual-data-attributes-value-examination.html#cb74-1"></a><span class="kw">summary</span>(data<span class="op">$</span>Fare)</span></code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
+##   0.000   7.896  14.454  33.295  31.275 512.329       1</code></pre>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="actual-data-attributes-value-examination.html#cb76-1"></a><span class="kw">length</span>(<span class="kw">unique</span>(data<span class="op">$</span>Fare))</span></code></pre></div>
+<pre><code>## [1] 282</code></pre>
+<p>The initial assessment tells us that:
+1. The value of <code>Fare</code> has one missing value.
+2. They are 282 different prices among 1308 tickets.
+3. The minimum value is 0 (Free ride?) and the maximum value is 512.329.
+4. The mean value is 33.295 and the median is only 14.454.
+5. There are two potential issues in here: 512.329 is extremely higher than others, it could be considered as an outlier or an error; another potential issue is the precision. Any currency cannot have a physical money which carry value three digits after the decimal point. so any value has three digits after decimal point could be an error.</p>
+<p>Let us examine the prediction power of attribute <code>Fare</code>.</p>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="actual-data-attributes-value-examination.html#cb78-1"></a><span class="kw">ggplot</span>(data, <span class="kw">aes</span>(<span class="dt">x =</span> Fare)) <span class="op">+</span></span>
+<span id="cb78-2"><a href="actual-data-attributes-value-examination.html#cb78-2"></a><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">5</span>) <span class="op">+</span></span>
+<span id="cb78-3"><a href="actual-data-attributes-value-examination.html#cb78-3"></a><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Fare Distribution&quot;</span>) <span class="op">+</span></span>
+<span id="cb78-4"><a href="actual-data-attributes-value-examination.html#cb78-4"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Fare&quot;</span>) <span class="op">+</span></span>
+<span id="cb78-5"><a href="actual-data-attributes-value-examination.html#cb78-5"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Total Count&quot;</span>) <span class="op">+</span></span>
+<span id="cb78-6"><a href="actual-data-attributes-value-examination.html#cb78-6"></a><span class="st">  </span><span class="kw">ylim</span>(<span class="dv">0</span>,<span class="dv">200</span>)</span></code></pre></div>
+<pre><code>## Warning: Removed 1 rows containing non-finite values (stat_bin).</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_bar).</code></pre>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="actual-data-attributes-value-examination.html#cb81-1"></a><span class="co"># Let&#39;s check to see if fare has predictive power</span></span>
+<span id="cb81-2"><a href="actual-data-attributes-value-examination.html#cb81-2"></a><span class="kw">ggplot</span>(data[<span class="dv">1</span><span class="op">:</span><span class="dv">891</span>,], <span class="kw">aes</span>(<span class="dt">x =</span> Fare, <span class="dt">fill =</span> Survived)) <span class="op">+</span></span>
+<span id="cb81-3"><a href="actual-data-attributes-value-examination.html#cb81-3"></a><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">5</span>) <span class="op">+</span></span>
+<span id="cb81-4"><a href="actual-data-attributes-value-examination.html#cb81-4"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Fare&quot;</span>) <span class="op">+</span></span>
+<span id="cb81-5"><a href="actual-data-attributes-value-examination.html#cb81-5"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Total Count&quot;</span>) <span class="op">+</span></span>
+<span id="cb81-6"><a href="actual-data-attributes-value-examination.html#cb81-6"></a><span class="st">  </span><span class="kw">ylim</span>(<span class="dv">0</span>,<span class="dv">50</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb81-7"><a href="actual-data-attributes-value-examination.html#cb81-7"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">fill =</span> <span class="st">&quot;Survived&quot;</span>)</span></code></pre></div>
+<pre><code>## Warning: Removed 6 rows containing missing values (geom_bar).</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:Fare"></span>
+<img src="Do-Data-Science-in-10-Hours_files/figure-html/Fare-1.svg" alt="Plot of *Fare* distribution and survival rate." width="50%" /><img src="Do-Data-Science-in-10-Hours_files/figure-html/Fare-2.svg" alt="Plot of *Fare* distribution and survival rate." width="50%" />
+<p class="caption">
+Figure 4.13: Plot of <em>Fare</em> distribution and survival rate.
+</p>
+</div>
+<p>It is not clear about <em>Fare</em> prediction power. Onething is clear that to be useful for predcition, Fare needs more engineer such as group it in different groups like &lt;5, 5 to 10, 10 to 15, …, etc.</p>
+</div>
+<div id="cabin" class="section level3">
+<h3><span class="header-section-number">4.5.11</span> Cabin</h3>
+<p><code>Cabin</code> has a large number</p>
+<p>#plot the 3-way relationship of sex, pclass, and survival
+ggplot(data[1:891,], aes(x = Sex, fill = Survived)) +
+geom_bar() +
+facet_wrap(~Pclass) +
+ggtitle(“Pclass”) +
+xlab(“Sex”) +
+ylab(“Total Count”) +
+labs(fill = “Survived”)</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="3">
+<li id="fn3"><p>This code is not brilliant. It used many intermediate variables, you can check their structure and contents from <strong>WorkSpace pane</strong>. You can come up with a better code.<a href="actual-data-attributes-value-examination.html#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="actual-attributes-types-examination.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-recods-level-assessment.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown/edit/master/inst/examples/04-understand-data.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Do Data Science in 10 Hours.pdf", "Do Data Science in 10 Hours.epub", "Do Data Science in 10 Hours.mobi"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
